@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class LectorTeclado {
     private Scanner mSc;
 
+    public LectorTeclado(){
+        Scanner sc = new Scanner(System.in);
+        init(sc);
+    }
+
     public void init(Scanner sc){
          mSc = sc;
     }
