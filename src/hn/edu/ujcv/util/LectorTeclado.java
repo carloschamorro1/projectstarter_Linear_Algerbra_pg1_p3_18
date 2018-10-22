@@ -11,7 +11,8 @@ public class LectorTeclado {
         init(sc);
     }
 
-    public void init(Scanner sc){
+
+    private void init(Scanner sc){
          mSc = sc;
     }
 
