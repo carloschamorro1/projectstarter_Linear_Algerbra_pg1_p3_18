@@ -34,13 +34,6 @@ public class VecR2 {
         return retval;
     }
 
-    public VecR2 div(double alpha){
-        VecR2 retval = new VecR2();
-
-
-        return retval;
-    }
-
     public VecR2()
     {
         this.x = 0;
