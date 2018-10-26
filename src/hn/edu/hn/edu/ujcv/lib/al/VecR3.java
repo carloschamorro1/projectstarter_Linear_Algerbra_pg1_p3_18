@@ -49,9 +49,7 @@ public class VecR3 {
     }
 
     public VecR3 crossProduct(VecR3 b){
-        // ? buscar formula en google.com o en duckduckgo
         VecR3 retval = new VecR3();
-
         return retval;
     }
 
