@@ -51,6 +51,9 @@ public class VecR2 {
         y = v.y;
     }
 
+    public VecR2 div(double alpha){
+        return new VecR2(x*1/alpha, y*1/alpha);
+    }
 
     public double getX() {
         return x;

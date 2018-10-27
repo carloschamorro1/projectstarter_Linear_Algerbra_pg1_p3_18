@@ -51,4 +51,41 @@ public class VecR4 {
         return retval;
     }
 
+    public VecR4 div(double alpha){
+        return new VecR4(x*1/alpha, y*1/alpha, z*1/alpha, w*1/alpha);
+    }
+
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+    public double getW() {
+        return w;
+    }
+
+    public void setW(double w) {
+        this.w = w;
+    }
 }
+
+
