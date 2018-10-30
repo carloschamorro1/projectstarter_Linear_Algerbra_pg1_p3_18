@@ -6,7 +6,7 @@ public class VecR2 {
     private double x;
     private double y;
 
-    public VecR2 add( VecR2 b){
+    public VecR2 add(VecR2 b){
         return new VecR2(x+b.x,y+b.y);
     }
 
@@ -46,10 +46,6 @@ public class VecR2 {
         this.y = y;
     }
 
-    public VecR2(VecR2 v){
-        x = v.x;
-        y = v.y;
-    }
 
     public VecR2 div(double alpha){
         return new VecR2(x*1/alpha, y*1/alpha);

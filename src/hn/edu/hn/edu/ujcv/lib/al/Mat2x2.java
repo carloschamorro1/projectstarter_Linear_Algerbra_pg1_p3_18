@@ -15,13 +15,10 @@ public class Mat2x2 {
     private VecR2 colX;
     private VecR2 colY;
 
-
-    //
     public Mat2x2(){
-        colX = new VecR2(1, 0);
+        colX = new VecR2(1,0);
         colY = new VecR2(0,1);
     }
-
 
     public VecR2 getColX() {
         return colX;
