@@ -87,7 +87,26 @@ public class Mat2x2 {
     }
     // resta
     public Mat2x2 resta (Mat2x2 b){
-        return new Mat2x2();
+        Mat2x2 retval = new Mat2x2();
+        //            cx cy              cx cy
+        // dado A  | 1  2 |  dado b  |  1  1 | x
+        //          | 2  3 |          |  0  0 |  y
+        //
+        //   retval:
+        //   |  a.cx.x - b.cx.x     a.cy.x -  b.cy.x |
+        //   |  a.cx.y - b.cx.y     a.cy.y - b.cy.y  |
+        //
+        //   a es this.
+        //   b es b
+        //   cx es colX
+        //   cy es colY
+        //   x es   getX , setX
+        //   y es   getY , setY
+        retval.colX.setX(this.colX.getX() - b.colX.getX());
+        retval.colX.setY(this.colX.getY() - b.colX.getY());
+        retval.colY.setX(this.colY.getX() - b.colY.getX());
+        retval.colY.setY(this.colY.getY() - b.colY.getY());
+        return retval;
     }
     // multiplicacion escalar
     public  Mat2x2 mul(double alpha){
@@ -116,6 +135,8 @@ public class Mat2x2 {
         //   y es   getY , setY
         retval.colX.setX(this.getFilaX().dotProduct(b.colX));
         retval.colX.setY(this.getFilaY().dotProduct(b.colX));
+        retval.colY.setX(this.getFilaX().dotProduct(b.colY));
+        retval.colY.setY(this.getFilaY().dotProduct(b.colY));
 
 
         return retval;
