@@ -41,7 +41,7 @@ public class MenuDimensionesV {
                 case 5:
                     break;
                 case 6:
-                    System.out.println("Gracias por utilizar el programa");
+                    System.out.println("Has regresado al menu principal \n \n");
                     break;
             }
         return opcion;
@@ -78,7 +78,7 @@ public class MenuDimensionesV {
                 case 6:
                     break;
                 case 7:
-                    System.out.println("Gracias por utilizar el programa");
+                    System.out.println("Has regresado al menu principal \n \n");
                     break;
             }
         return opcion;}
@@ -90,7 +90,7 @@ public class MenuDimensionesV {
         System.out.println("3.............. Multiplicacion");
         System.out.println("4.............. Producto punto");
         System.out.println("5.............. Division entre un escalar");
-        System.out.println("6.............. Regresar");
+        System.out.println("6.............. Regresar al menu principal");
     }
 
     public int leerOpcionesR4() {
@@ -112,7 +112,7 @@ public class MenuDimensionesV {
                 case 5:
                     break;
                 case 6:
-                    System.out.println("Gracias por utilizar el programa");
+                    System.out.println("Has regresado al menu principal \n \n");
                     break;
             }
         return opcion;

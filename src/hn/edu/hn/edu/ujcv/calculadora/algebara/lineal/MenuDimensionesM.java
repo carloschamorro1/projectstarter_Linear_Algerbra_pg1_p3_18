@@ -40,7 +40,7 @@ public class MenuDimensionesM {
                 case 5:
                     break;
                 case 6:
-                    System.out.println("Gracias por utilizar el programa");
+                    System.out.println("Has regresado al menu principal \n \n");
                     break;
             }
         return opcion;}
@@ -75,7 +75,7 @@ public class MenuDimensionesM {
                 case 5:
                     break;
                 case 6:
-                    System.out.println("Gracias por utilizar el programa");
+                    System.out.println("Has regresado al menu principal \n \n");
                     break;
             }
         return opcion;}
@@ -86,7 +86,7 @@ public class MenuDimensionesM {
         System.out.println("3.............. Multiplicacion por un escalar");
         System.out.println("4.............. Multiplicacion por un vector");
         System.out.println("5.............. Multiplicacion por una matriz");
-        System.out.println("6.............. Regresar");
+        System.out.println("6.............. Regresar al menu principal");
     }
 
     public int leerOpciones4x4() {
@@ -108,7 +108,7 @@ public class MenuDimensionesM {
                 case 5:
                     break;
                 case 6:
-                    System.out.println("Gracias por utilizar el programa");
+                    System.out.println("Has regresado al menu principal \n \n");
                     break;
             }
 

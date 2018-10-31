@@ -3,7 +3,7 @@ package hn.edu.hn.edu.ujcv.calculadora.algebara.lineal;
 import hn.edu.ujcv.util.LectorTeclado;
 
 public class MenuVectores {
-    private int opcion3;
+    public int opcion;
     MenuDimensionesV menuDimensionesV = new MenuDimensionesV();
     LectorTeclado lt = new LectorTeclado();
 
@@ -13,17 +13,17 @@ public class MenuVectores {
         System.out.println("1.............. Vector en R2");
         System.out.println("2.............. Vector en R3");
         System.out.println("3.............. Vector en R4");
-        System.out.println("4.............. Salir");
+        System.out.println("4.............. Regresar al menu principal");
     }
     public int leerOpciones() {
-        opcion3 = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
-        return opcion3;
+        opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
+        return opcion;
     }
 
-    public int procesarOpcion(int opcion3) {
+    public int procesarOpcion(int opcion) {
             presentarOpciones();
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
-            switch (opcion3) {
+            switch (opcion) {
                 case 1: menuDimensionesV.presentarOpcionesR2();
                     menuDimensionesV.procesarOpcionR2(menuDimensionesV.leerOpcionesR2());
                     break;
@@ -33,7 +33,10 @@ public class MenuVectores {
                 case 3: menuDimensionesV.presentarOpcionesR4();
                     menuDimensionesV.procesarOpcionR4(menuDimensionesV.leerOpcionesR4());
                     break;
+                case 4:
+                    System.out.println("Has regresado al menu principal \n \n");
+                    break;
             }
-        return opcion3;
+        return opcion;
     }
 }

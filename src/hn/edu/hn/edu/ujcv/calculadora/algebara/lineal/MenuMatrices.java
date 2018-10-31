@@ -6,7 +6,7 @@ import hn.edu.hn.edu.ujcv.lib.al.Mat4x4;
 import hn.edu.ujcv.util.LectorTeclado;
 
 public class MenuMatrices {
-    private int opcion2;
+    public int opcion;
     MenuDimensionesM menuDimensionesM = new MenuDimensionesM();
     LectorTeclado lt = new LectorTeclado();
     Mat2x2 mat2x2 = new Mat2x2();
@@ -19,17 +19,17 @@ public class MenuMatrices {
         System.out.println("1.............. Matriz 2x2");
         System.out.println("2.............. Matriz 3x3");
         System.out.println("3.............. Matriz 4x4");
-        System.out.println("4.............. Salir");
+        System.out.println("4.............. Regresar al menu principal");
     }
 
     public int leerOpciones() {
-        opcion2 = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
-        return opcion2;
+        opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
+        return opcion;
     }
 
-    public void procesarOpcion(int opcion2) {
+    public void procesarOpcion(int opcion) {
         //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
-        switch (opcion2) {
+        switch (opcion) {
             case 1:
                 menuDimensionesM.presentarOpciones2x2();
                 menuDimensionesM.procesarOpcion2x2(menuDimensionesM.leerOpciones2x2());
@@ -43,7 +43,7 @@ public class MenuMatrices {
                 menuDimensionesM.procesarOpcion4x4(menuDimensionesM.leerOpciones4x4());
                 break;
             case 4:
-                System.out.println("Break");
+                System.out.println("Has regresado al menu principal \n \n");
                 break;
         }
     }
