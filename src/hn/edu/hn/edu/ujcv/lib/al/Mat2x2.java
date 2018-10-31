@@ -110,11 +110,20 @@ public class Mat2x2 {
     }
     // multiplicacion escalar
     public  Mat2x2 mul(double alpha){
-        return  new Mat2x2();
+        Mat2x2 retval = new Mat2x2();
+        retval.colX.setX(this.colX.getX() * alpha);
+        retval.colX.setY(this.colX.getY() * alpha);
+        retval.colY.setX(this.colY.getX() * alpha);
+        retval.colY.setY(this.colY.getY() * alpha);
+        return  retval;
     }
     // multiplicacion vector columna
     public VecR2 mul(VecR2 v){
-        return new VecR2();
+        VecR2 retval = new VecR2();
+        Mat2x2 b = new Mat2x2();
+        b.colX.setX(this.getFilaX().dotProduct(b.colX));
+        b.colX.setX(this.getFilaY().dotProduct(b.colX));
+        return retval;
     }
     // multiplicacion por matriz
     public Mat2x2 mul (Mat2x2 b){

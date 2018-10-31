@@ -27,7 +27,6 @@ public class MenuDimensionesM {
     }
 
     public int procesarOpcion2x2(int opcion) {
-        do {
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1: ;
@@ -44,7 +43,6 @@ public class MenuDimensionesM {
                     System.out.println("Gracias por utilizar el programa");
                     break;
             }
-        }while(opcion!= 6);
         return opcion;}
 
     public void presentarOpciones3x3() {
@@ -63,7 +61,7 @@ public class MenuDimensionesM {
     }
 
     public int procesarOpcion3x3(int opcion) {
-        do {
+
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
@@ -80,7 +78,6 @@ public class MenuDimensionesM {
                     System.out.println("Gracias por utilizar el programa");
                     break;
             }
-        }while(opcion!= 6);
         return opcion;}
     public void presentarOpciones4x4() {
         System.out.println("\t \t \t \t Matrices de 4x4");
@@ -98,7 +95,6 @@ public class MenuDimensionesM {
     }
 
     public int procesarOpcion4x4(int opcion) {
-        do {
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
@@ -115,7 +111,7 @@ public class MenuDimensionesM {
                     System.out.println("Gracias por utilizar el programa");
                     break;
             }
-        }while(opcion!= 6);
+
         return opcion;}
 }
 

@@ -22,7 +22,7 @@ public class MenuPrincipal {
     }
 
     public void procesarOpcion(int opcion1) {
-        do {
+
             //opcion1 = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion1) {
                 case 1:
@@ -37,6 +37,5 @@ public class MenuPrincipal {
                     System.out.println("Gracias por utilizar el programa");
                     break;
             }
-        } while (opcion1 != 3);
     }
 }

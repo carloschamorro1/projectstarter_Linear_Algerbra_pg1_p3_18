@@ -28,11 +28,9 @@ public class MenuDimensionesV {
     }
 
     public int procesarOpcionR2(int opcion) {
-        do {
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
-                   ;
                     break;
                 case 2:
                     break;
@@ -46,7 +44,6 @@ public class MenuDimensionesV {
                     System.out.println("Gracias por utilizar el programa");
                     break;
             }
-        } while (opcion != 6);
         return opcion;
     }
     public void presentarOpcionesR3() {
@@ -66,7 +63,6 @@ public class MenuDimensionesV {
     }
 
     public int procesarOpcionR3(int opcion) {
-        do {
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
@@ -85,7 +81,6 @@ public class MenuDimensionesV {
                     System.out.println("Gracias por utilizar el programa");
                     break;
             }
-        }while(opcion!= 7);
         return opcion;}
 
     public void presentarOpcionesR4() {
@@ -104,7 +99,6 @@ public class MenuDimensionesV {
     }
 
     public int procesarOpcionR4(int opcion) {
-        do {
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
@@ -121,7 +115,6 @@ public class MenuDimensionesV {
                     System.out.println("Gracias por utilizar el programa");
                     break;
             }
-        } while (opcion != 6);
         return opcion;
     }
 
