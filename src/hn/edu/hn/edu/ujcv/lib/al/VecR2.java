@@ -1,7 +1,5 @@
 package hn.edu.hn.edu.ujcv.lib.al;
 
-
-
 public class VecR2 {
     private double x;
     private double y;

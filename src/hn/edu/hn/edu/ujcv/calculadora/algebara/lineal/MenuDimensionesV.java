@@ -50,7 +50,7 @@ public class MenuDimensionesV {
         return opcion;
     }
     public void presentarOpcionesR3() {
-        System.out.println("\t \t \t \t Matrices de R3");
+        System.out.println("\t \t \t \t Vectores en R3");
         System.out.println("1.............. Suma");
         System.out.println("2.............. Resta");
         System.out.println("3.............. Multiplicacion");
