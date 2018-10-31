@@ -3,7 +3,7 @@ package hn.edu.hn.edu.ujcv.calculadora.algebara.lineal;
 import hn.edu.ujcv.util.LectorTeclado;
 
 public class MenuVectores {
-    public int opcion;
+    public int opcion2;
     MenuDimensionesV menuDimensionesV = new MenuDimensionesV();
     LectorTeclado lt = new LectorTeclado();
 
@@ -16,14 +16,13 @@ public class MenuVectores {
         System.out.println("4.............. Regresar al menu principal");
     }
     public int leerOpciones() {
-        opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
-        return opcion;
+        opcion2 = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
+        return opcion2;
     }
 
-    public int procesarOpcion(int opcion) {
-            presentarOpciones();
+    public int procesarOpcion(int opcion2) {
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
-            switch (opcion) {
+            switch (opcion2) {
                 case 1: menuDimensionesV.presentarOpcionesR2();
                     menuDimensionesV.procesarOpcionR2(menuDimensionesV.leerOpcionesR2());
                     break;
@@ -37,6 +36,6 @@ public class MenuVectores {
                     System.out.println("Has regresado al menu principal \n \n");
                     break;
             }
-        return opcion;
+        return opcion2;
     }
 }
