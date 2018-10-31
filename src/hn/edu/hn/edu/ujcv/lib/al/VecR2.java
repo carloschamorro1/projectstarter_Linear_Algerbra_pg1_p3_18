@@ -1,10 +1,12 @@
 package hn.edu.hn.edu.ujcv.lib.al;
-
+import hn.edu.ujcv.util.LectorTeclado;
 public class VecR2 {
     private double x;
     private double y;
-
+    LectorTeclado lt = new LectorTeclado();
     public VecR2 add(VecR2 b){
+        x = lt.leerEntero("","");
+        y = lt.leerEntero("","");
         return new VecR2(x+b.x,y+b.y);
     }
 
@@ -60,4 +62,5 @@ public class VecR2 {
     public double getY() { return y;}
 
     public void setY(double y) { this.y = y;}
+
 }

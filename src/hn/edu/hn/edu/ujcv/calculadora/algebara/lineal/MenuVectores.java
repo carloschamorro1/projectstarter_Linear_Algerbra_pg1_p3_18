@@ -18,6 +18,7 @@ public class MenuVectores {
     public int leerOpciones() {
         opcion2 = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
         return opcion2;
+
     }
 
     public int procesarOpcion(int opcion2) {

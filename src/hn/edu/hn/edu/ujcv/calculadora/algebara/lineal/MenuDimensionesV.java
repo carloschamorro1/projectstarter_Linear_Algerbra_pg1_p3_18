@@ -7,10 +7,16 @@ import hn.edu.ujcv.util.LectorTeclado;
 
 public class MenuDimensionesV {
     private int opcion;
+    private double x;
+    private double y;
+    private double z;
+    private double w;
     LectorTeclado lt = new LectorTeclado();
     VecR2 r2 = new VecR2();
     VecR3 r3 = new VecR3();
     VecR4 r4 = new VecR4();
+
+
 
     public void presentarOpcionesR2() {
         System.out.println("\t \t \t \t Vectores en R2");
@@ -118,4 +124,35 @@ public class MenuDimensionesV {
         return opcion;
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+
+    public double getW() {
+        return w;
+    }
+
+    public void setW(double w) {
+        this.w = w;
+    }
 }
