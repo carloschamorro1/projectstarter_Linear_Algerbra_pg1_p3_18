@@ -33,8 +33,8 @@ public class VecR2 {
     public VecR2 mul(double alpha){
         VecR2 retval = new VecR2();
         alpha = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
-        x = lt.leerReal("Ingrese el primer numero del vector","Error! Ha ingresado un caracter no valido");
-        y = lt.leerReal("Ingrese el segundo numero del vector","Error! Ha ingresado un caracter no valido");
+        x = lt.leerReal("Ingrese el primer numero vector","Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el segundo numero vector","Error! Ha ingresado un caracter no valido");
         retval.x = alpha * x;
         retval.y = alpha * y;
         System.out.println("La multiplicacion del vector por un escalar es: (" + retval.x +","+ retval.y+ ")");
@@ -74,8 +74,8 @@ public class VecR2 {
     public VecR2 div(double alpha){
         VecR2 retval = new VecR2();
         alpha = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
-        x = lt.leerReal("Ingrese el primer numero del vector","Error! Ha ingresado un caracter no valido");
-        y = lt.leerReal("Ingrese el segundo numero del vector","Error! Ha ingresado un caracter no valido");
+        x = lt.leerReal("Ingrese el primer numero vector","Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el segundo numero vector","Error! Ha ingresado un caracter no valido");
         retval.x = 1/alpha * x;
         retval.y = 1/alpha * y;
         System.out.println("La division del vector entre un escalar es: (" + String.format("%.2f",retval.x) + "y:" + String.format("%.2f",retval.y));

@@ -8,9 +8,6 @@ import hn.edu.ujcv.util.LectorTeclado;
 public class MenuDimensionesM {
     private int opcion;
     LectorTeclado lt = new LectorTeclado();
-    Mat2x2 mat2x2 = new Mat2x2();
-    Mat3x3 mat3x3 = new Mat3x3();
-    Mat4x4 mat4x4 = new Mat4x4();
     public void presentarOpciones2x2() {
         System.out.println("\t \t \t \t Matrices de 2x2");
         System.out.println("1.............. Suma");
@@ -111,7 +108,6 @@ public class MenuDimensionesM {
                     System.out.println("Has regresado al menu principal \n \n");
                     break;
             }
-
         return opcion;}
 }
 

@@ -58,9 +58,9 @@ public class VecR3 {
     public VecR3 mul(double alpha){
         VecR3 retval = new VecR3();
         alpha = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
-        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
-        y = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
-        z = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        x = lt.leerReal("Ingrese el primer numero del vector","Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el segundo numero del vector","Error! Ha ingresado un caracter no valido");
+        z = lt.leerReal("Ingrese el tercer numero del  vector","Error! Ha ingresado un caracter no valido");
         retval.x = alpha * x;
         retval.y = alpha * y;
         retval.z = alpha * z;
@@ -84,7 +84,7 @@ public class VecR3 {
         z = lt.leerReal("Ingrese el segundo numero del segundo vector","Error! Ha ingresado un caracter no valido");
         b.z = lt.leerReal("Ingrese el tercer numero del segundo vector","Error! Ha ingresado un caracter no valido");
         retval = (x*b.y)+(b.x*z)+(y*b.z);
-        System.out.println(retval);
+        System.out.println("El producto punto de los vectores es : (" + retval + ")");
         return retval;
     }
 
@@ -120,9 +120,9 @@ public class VecR3 {
     public VecR3 div(double alpha){
         VecR3 retval = new VecR3();
         alpha = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
-        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
-        y = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
-        z = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        x = lt.leerReal("Ingrese el primer numero del vector","Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el segundo numero del vector","Error! Ha ingresado un caracter no valido");
+        z = lt.leerReal("Ingrese el tercer numero del vector","Error! Ha ingresado un caracter no valido");
         retval.x = 1/alpha * x;
         retval.y = 1/alpha * y;
         retval.z = 1/alpha * z;
