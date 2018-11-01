@@ -7,6 +7,7 @@ import hn.edu.ujcv.util.LectorTeclado;
 
 public class MenuDimensionesV {
     private int opcion;
+    VecR2 b;
     private double x;
     private double y;
     private double z;
@@ -37,6 +38,9 @@ public class MenuDimensionesV {
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
+                    VecR2 a = new VecR2(1.0,1.1);
+                    VecR2 b = new VecR2(2.2,3.0);
+                    VecR2 res = a.add(b);
                     break;
                 case 2:
                     break;

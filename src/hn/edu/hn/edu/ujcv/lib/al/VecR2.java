@@ -3,17 +3,30 @@ import hn.edu.ujcv.util.LectorTeclado;
 public class VecR2 {
     private double x;
     private double y;
+
     LectorTeclado lt = new LectorTeclado();
+
     public VecR2 add(VecR2 b){
-        x = lt.leerEntero("","");
-        y = lt.leerEntero("","");
-        return new VecR2(x+b.x,y+b.y);
+        VecR2 retval = new VecR2();
+        x = lt.leerEntero("kkkkkkk","lllll");
+        b.x = lt.leerEntero("sssssss", "wwwwwwww");
+        y = lt.leerEntero("klsksalk","jjjsjs");
+        b.y = lt.leerEntero("opopopop","uuuuuuuu");
+        retval.x = (x+y);
+        retval.y = (b.x+b.y);
+        System.out.println("x:"+ retval.x +"y:"+ retval.y);
+        return retval;
     }
 
     public VecR2 sub(VecR2 b){
         VecR2 retval = new VecR2();
-        retval.x = x + b.x;
-        retval.setY(this.getY()+ b.getY());
+        x = lt.leerEntero("kkkkkkk","lllll");
+        b.x = lt.leerEntero("sssssss", "wwwwwwww");
+        y = lt.leerEntero("klsksalk","jjjsjs");
+        b.y = lt.leerEntero("opopopop","uuuuuuuu");
+        retval.x = (x-y);
+        retval.y = (b.x-b.y);
+        System.out.println("x:"+ retval.x +"y:"+ retval.y);
         return retval;
     }
 
