@@ -87,12 +87,21 @@ public class MenuDimensionesV {
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
+                    VecR3 a1 = new VecR3(1.0,1.1,1.0);
+                    VecR3 b1 = new VecR3(2.2,3.0,1.0);
+                    VecR3 res1 = a1.add(b1);
                     break;
                 case 2:
+                    VecR3 a2 = new VecR3(1.0,1.1,1.0);
+                    VecR3 b2 = new VecR3(2.2,3.0,1.0);
+                    VecR3 res2 = a2.sub(b2);
                     break;
                 case 3:
                     break;
                 case 4:
+                    VecR3 a4 = new VecR3(1.0,1.1,1.0);
+                    VecR3 b4 = new VecR3(1.0,1.1,1.0);
+                    a4.dotProduct(b4);
                     break;
                 case 5:
                     break;

@@ -1,10 +1,12 @@
 package hn.edu.hn.edu.ujcv.lib.al;
 
+import hn.edu.ujcv.util.LectorTeclado;
+
 public class VecR3 {
     private double x;
     private double y;
     private double z;
-
+    LectorTeclado lt = new LectorTeclado();
     public VecR3()
     {
         this.x = 0;
@@ -24,11 +26,33 @@ public class VecR3 {
     //todo: conformar al contrato de un vector
 
     public VecR3 add(VecR3 b){
-        return new VecR3(x+b.x, y+b.y, z+b.z);
+        VecR3 retval = new VecR3();
+        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        z = lt.leerReal("Ingrese el segundo numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        b.z = lt.leerReal("Ingrese el tercer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        retval.x = (x+b.y);
+        retval.y = (b.x+z);
+        retval.z = (y+b.z);
+        System.out.println("La suma de vectores es: (" + retval.x +","+ retval.y+ ","+ retval.z +")");
+        return retval;
     }
 
     public VecR3 sub(VecR3 b){
-        return new VecR3(x-b.x, y-b.y, z-b.z);
+        VecR3 retval = new VecR3();
+        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        z = lt.leerReal("Ingrese el segundo numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        b.z = lt.leerReal("Ingrese el tercer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        retval.x = (x-b.y);
+        retval.y = (b.x-z);
+        retval.z = (y-b.z);
+        System.out.println("La suma de vectores es: (" + retval.x +","+ retval.y+ ","+ retval.z +")");
+        return retval;
     }
 
     public VecR3 mul(double alpha){
@@ -44,7 +68,14 @@ public class VecR3 {
         // 2 es y.
         // 3 es z.
         double retval = 0.0;
-        retval = (this.x * b.x)+ (this.y * b.y) + (this.z * b.z);
+        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        z = lt.leerReal("Ingrese el segundo numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        b.z = lt.leerReal("Ingrese el tercer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        retval = (x*b.y)+(b.x*z)+(y*b.z);
+        System.out.println(retval);
         return retval;
     }
 

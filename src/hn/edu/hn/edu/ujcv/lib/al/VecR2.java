@@ -11,7 +11,7 @@ public class VecR2 {
         x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
         b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
         y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
-        b.y = lt.leerReal("Ingrese el segundo numero del primer segundo","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
         retval.x = (x+y);
         retval.y = (b.x+b.y);
         System.out.println("La suma de vectores es: (" + retval.x +","+ retval.y+ ")");
@@ -23,7 +23,7 @@ public class VecR2 {
         x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
         b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
         y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
-        b.y = lt.leerReal("Ingrese el segundo numero del primer segundo","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
         retval.x = (x-y);
         retval.y = (b.x-b.y);
         System.out.println("La resta de vectores es: (" + retval.x +","+ retval.y+ ")");
@@ -52,7 +52,7 @@ public class VecR2 {
         x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
         b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
         y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
-        b.y = lt.leerReal("Ingrese el segundo numero del primer segundo","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
         retval = (x * y) + (b.x * b.y);
         System.out.println("El producto punto de los vectores es : (" + retval + ")");
         return retval;
