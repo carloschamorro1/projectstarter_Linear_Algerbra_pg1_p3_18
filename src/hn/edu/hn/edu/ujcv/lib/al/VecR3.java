@@ -59,8 +59,8 @@ public class VecR3 {
         VecR3 retval = new VecR3();
         alpha = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
         x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
-        y = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
-        z = lt.leerReal("Ingrese el segundo numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
+        z = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
         retval.x = alpha * x;
         retval.y = alpha * y;
         retval.z = alpha * z;
@@ -118,7 +118,17 @@ public class VecR3 {
     }
 
     public VecR3 div(double alpha){
-        return new VecR3(x*1/alpha, y*1/alpha, z*1/alpha);
+        VecR3 retval = new VecR3();
+        alpha = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
+        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
+        z = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        retval.x = 1/alpha * x;
+        retval.y = 1/alpha * y;
+        retval.z = 1/alpha * z;
+        System.out.println("La division del vector entre un escalar es: (" + String.format("%.2f",retval.x) +
+                            "," + String.format("%.2f",retval.y)+ "," + String.format("%.2f",retval.z)+ ")");
+        return retval;
     }
 
     public void setX(double x) {

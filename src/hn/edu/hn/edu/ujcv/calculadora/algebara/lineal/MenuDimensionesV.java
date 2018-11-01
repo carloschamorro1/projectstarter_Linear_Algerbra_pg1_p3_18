@@ -112,6 +112,9 @@ public class MenuDimensionesV {
                     a5.crossProduct(b5);
                     break;
                 case 6:
+                    VecR3 a6 = new VecR3(1.0,1.1,1.0);
+                    double alpha2 = 0;
+                    a6.div(alpha2);
                     break;
                 case 7:
                     System.out.println("Has regresado al menu principal \n \n");
