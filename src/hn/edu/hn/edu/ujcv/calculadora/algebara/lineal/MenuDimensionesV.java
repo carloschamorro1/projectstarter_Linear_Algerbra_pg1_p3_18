@@ -107,6 +107,9 @@ public class MenuDimensionesV {
                     a4.dotProduct(b4);
                     break;
                 case 5:
+                    VecR3 a5 = new VecR3(1.0,1.1,1.0);
+                    VecR3 b5 = new VecR3(1.0,1.1,1.0);
+                    a5.crossProduct(b5);
                     break;
                 case 6:
                     break;

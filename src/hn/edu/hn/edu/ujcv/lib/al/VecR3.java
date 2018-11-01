@@ -101,6 +101,8 @@ public class VecR3 {
         // i = (u2 * v3 - u3 * v2)
         // j = -(u1 * v3 - v1 * u3)
         // k = (u1 * v2 - u2 * v1) b.
+        //(x    b.x  y )
+        //(b.y  z   b.z)
         VecR3 retval = new VecR3();
         x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
         b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
@@ -108,10 +110,10 @@ public class VecR3 {
         b.y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
         z = lt.leerReal("Ingrese el segundo numero del segundo vector","Error! Ha ingresado un caracter no valido");
         b.z = lt.leerReal("Ingrese el tercer numero del segundo vector","Error! Ha ingresado un caracter no valido");
-        retval.x = (this.y * b.z - this.z * b.y);
-        retval.y = - (x * b.z - b.x * this.z);
-        retval.z = (this.x * b.y - b.y * this.x);
-        System.out.println(retval.x + retval.y + retval.z);
+        retval.x = (b.x * b.z - y * z);
+        retval.y = (y*b.y - x*b.z);
+        retval.z = (x*z - b.x *b.y);
+        System.out.println("El producto cruz es: ( " +retval.x + "," + retval.y + "," +retval.z + ")");
         return retval;
     }
 
