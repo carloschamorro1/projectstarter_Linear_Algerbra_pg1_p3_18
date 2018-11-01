@@ -97,6 +97,9 @@ public class MenuDimensionesV {
                     VecR3 res2 = a2.sub(b2);
                     break;
                 case 3:
+                    VecR3 a3 = new VecR3(1.0,1.1,1.0);
+                    double alpha1 = 0;
+                    VecR3 res3 = a3.mul(alpha1);
                     break;
                 case 4:
                     VecR3 a4 = new VecR3(1.0,1.1,1.0);

@@ -56,7 +56,16 @@ public class VecR3 {
     }
 
     public VecR3 mul(double alpha){
-        return new VecR3(x*alpha, y*alpha, z*alpha);
+        VecR3 retval = new VecR3();
+        alpha = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
+        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        z = lt.leerReal("Ingrese el segundo numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        retval.x = alpha * x;
+        retval.y = alpha * y;
+        retval.z = alpha * z;
+        System.out.println("La multiplicacion del vector por un escalar es: (" + retval.x +","+ retval.y+ ","+ retval.z + ")");
+        return retval;
     }
 
     public double dotProduct(VecR3 b){
@@ -93,9 +102,16 @@ public class VecR3 {
         // j = -(u1 * v3 - v1 * u3)
         // k = (u1 * v2 - u2 * v1) b.
         VecR3 retval = new VecR3();
+        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el tercer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        z = lt.leerReal("Ingrese el segundo numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        b.z = lt.leerReal("Ingrese el tercer numero del segundo vector","Error! Ha ingresado un caracter no valido");
         retval.x = (this.y * b.z - this.z * b.y);
         retval.y = - (x * b.z - b.x * this.z);
         retval.z = (this.x * b.y - b.y * this.x);
+        System.out.println(retval.x + retval.y + retval.z);
         return retval;
     }
 
