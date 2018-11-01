@@ -149,5 +149,3 @@ public class VecR4 {
         this.w = w;
     }
 }
-
-

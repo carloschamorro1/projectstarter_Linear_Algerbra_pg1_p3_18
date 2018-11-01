@@ -6,6 +6,19 @@ public class VecR2 {
 
     LectorTeclado lt = new LectorTeclado();
 
+
+    public VecR2()
+    {
+        this.x = 0;
+        this.y = 0;
+    }
+
+    public VecR2(double x, double y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+
     public VecR2 add(VecR2 b){
         VecR2 retval = new VecR2();
         x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
@@ -57,19 +70,6 @@ public class VecR2 {
         System.out.println("El producto punto de los vectores es : (" + retval + ")");
         return retval;
     }
-
-    public VecR2()
-    {
-        this.x = 0;
-        this.y = 0;
-    }
-
-    public VecR2(double x, double y)
-    {
-        this.x = x;
-        this.y = y;
-    }
-
 
     public VecR2 div(double alpha){
         VecR2 retval = new VecR2();
