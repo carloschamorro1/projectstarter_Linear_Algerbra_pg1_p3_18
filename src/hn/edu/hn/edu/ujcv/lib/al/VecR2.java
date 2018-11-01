@@ -8,30 +8,36 @@ public class VecR2 {
 
     public VecR2 add(VecR2 b){
         VecR2 retval = new VecR2();
-        x = lt.leerEntero("kkkkkkk","lllll");
-        b.x = lt.leerEntero("sssssss", "wwwwwwww");
-        y = lt.leerEntero("klsksalk","jjjsjs");
-        b.y = lt.leerEntero("opopopop","uuuuuuuu");
+        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el segundo numero del primer segundo","Error! Ha ingresado un caracter no valido");
         retval.x = (x+y);
         retval.y = (b.x+b.y);
-        System.out.println("x:"+ retval.x +"y:"+ retval.y);
+        System.out.println("La suma de vectores es: (" + retval.x +","+ retval.y+ ")");
         return retval;
     }
 
     public VecR2 sub(VecR2 b){
         VecR2 retval = new VecR2();
-        x = lt.leerEntero("kkkkkkk","lllll");
-        b.x = lt.leerEntero("sssssss", "wwwwwwww");
-        y = lt.leerEntero("klsksalk","jjjsjs");
-        b.y = lt.leerEntero("opopopop","uuuuuuuu");
+        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el segundo numero del primer segundo","Error! Ha ingresado un caracter no valido");
         retval.x = (x-y);
         retval.y = (b.x-b.y);
-        System.out.println("x:"+ retval.x +"y:"+ retval.y);
+        System.out.println("La resta de vectores es: (" + retval.x +","+ retval.y+ ")");
         return retval;
     }
 
     public VecR2 mul(double alpha){
-        VecR2 retval = new VecR2(this.getX()* alpha, y *alpha);
+        VecR2 retval = new VecR2();
+        alpha = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
+        x = lt.leerReal("Ingrese el primer numero del vector","Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el segundo numero del vector","Error! Ha ingresado un caracter no valido");
+        retval.x = alpha * x;
+        retval.y = alpha * y;
+        System.out.println("La multiplicacion del vector por un escalar es: (" + retval.x +","+ retval.y+ ")");
         return retval;
     }
 
@@ -43,7 +49,12 @@ public class VecR2 {
         // 1 es x.
         // 2 es y.
         double retval;
-        retval = this.x * b.x + this.y * b.y;
+        x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+        b.x = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+        b.y = lt.leerReal("Ingrese el segundo numero del primer segundo","Error! Ha ingresado un caracter no valido");
+        retval = (x * y) + (b.x * b.y);
+        System.out.println("El producto punto de los vectores es : (" + retval + ")");
         return retval;
     }
 
@@ -61,7 +72,14 @@ public class VecR2 {
 
 
     public VecR2 div(double alpha){
-        return new VecR2(x*1/alpha, y*1/alpha);
+        VecR2 retval = new VecR2();
+        alpha = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
+        x = lt.leerReal("Ingrese el primer numero del vector","Error! Ha ingresado un caracter no valido");
+        y = lt.leerReal("Ingrese el segundo numero del vector","Error! Ha ingresado un caracter no valido");
+        retval.x = 1/alpha * x;
+        retval.y = 1/alpha * y;
+        System.out.println("La division del vector entre un escalar es: (" + String.format("%.2f",retval.x) + "y:" + String.format("%.2f",retval.y));
+        return retval;
     }
 
     public double getX() {

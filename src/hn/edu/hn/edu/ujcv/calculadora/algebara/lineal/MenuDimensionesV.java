@@ -47,10 +47,19 @@ public class MenuDimensionesV {
                    VecR2 res2 = a2.sub(b2);
                     break;
                 case 3:
+                    VecR2 a3 = new VecR2(1.0,1.1);
+                    double alpha1 = 0;
+                    VecR2 res3 = a3.mul(alpha1);
                     break;
                 case 4:
+                    VecR2 a4 = new VecR2(1.0,1.1);
+                    VecR2 b4 = new VecR2(1.0,1.1);
+                    a4.dotProduct(b4);
                     break;
                 case 5:
+                    VecR2 a5 = new VecR2(1.0,1.1);
+                    double alpha2 = 0;
+                    a5.div(alpha2);
                     break;
                 case 6:
                     System.out.println("Has regresado al menu principal \n \n");

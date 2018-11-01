@@ -22,6 +22,17 @@ public class LectorTeclado {
          mSc = sc;
     }
 
+    public int leerReal(String mensaje, String mensajeError){
+        int retval = 0;
+        System.out.println(mensaje);
+        while(!mSc.hasNextDouble()){
+            mSc.nextLine();
+            System.out.println(mensajeError);
+        }
+        retval = mSc.nextInt();
+        return retval;
+    }
+
     public int leerEntero(String mensaje, String mensajeError){
         int retval = 0;
         System.out.println(mensaje);
@@ -32,7 +43,6 @@ public class LectorTeclado {
         retval = mSc.nextInt();
         return retval;
     }
-
     public VecR2 leerVecR2(double x, double y, String mensaje, String mensajeError){
         VecR2 retval = new VecR2();
         System.out.println(mensaje);
