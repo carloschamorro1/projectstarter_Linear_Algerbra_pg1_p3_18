@@ -11,7 +11,6 @@ public class MenuDimensionesV {
     private double y;
     private double z;
     private double w;
-    VecR2 b = new VecR2();
     private int opcion;
     LectorTeclado lt = new LectorTeclado();
 
@@ -31,15 +30,16 @@ public class MenuDimensionesV {
     }
 
     public int procesarOpcionR2(int opcion) {
+        VecR2 b = new VecR2();
             //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
                     VecR2 a1 = new VecR2(1.0,1.1);
                     VecR2 b1 = new VecR2(2.2,3.0);
-//                    x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
-//                    y = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
-//                    b.x = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
-//                    b.y = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
+                    x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+                    y = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
+                    b.setX(lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido"));
+//                    b. = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
                     VecR2 res1 = a1.add(b1);
                     //        System.out.println("La suma de vectores es: (" + retval.x +","+ retval.y+ ")");
                     break;

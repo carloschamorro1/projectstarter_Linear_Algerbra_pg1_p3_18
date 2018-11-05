@@ -20,41 +20,6 @@ public class Mat2x2 {
         colY = new VecR2(0,1);
     }
 
-    public VecR2 getColX() {
-        return colX;
-    }
-
-    public void setColX(VecR2 colX) {
-        this.colX = colX;
-    }
-
-    public VecR2 getColY() {
-        return colY;
-    }
-
-    public void setColY(VecR2 colY) {
-        this.colY = colY;
-    }
-
-    public VecR2 getFilaX(){
-        VecR2 retval = new VecR2(colX.getX(),colY.getX());
-        return retval;
-    }
-
-    public void  setFilaX(VecR2 filaX){
-        this.colX.setX(filaX.getX());
-        this.colY.setX(filaX.getY());
-    }
-
-    public VecR2 getFilaY(){
-        VecR2 retval = new VecR2(colX.getY(),colY.getY());
-        return retval;
-    }
-
-    public void  setFilaY(VecR2 filaY){
-        this.colX.setY(filaY.getX());
-        this.colY.setY(filaY.getY());
-    }
 
     // este contrato debe estar en las demas matrices
     // y no debe variar mas que en la dimencion de los objetos
@@ -76,6 +41,7 @@ public class Mat2x2 {
         //   cy es colY
         //   x es   getX , setX
         //   y es   getY , setY
+
         retval.colX.setX(this.colX.getX() + b.colX.getX());
         retval.colX.setY(this.colX.getY() + b.colX.getY());
         retval.colY.setX(this.colY.getX() + b.colY.getX());
@@ -121,7 +87,7 @@ public class Mat2x2 {
         VecR2 retval = new VecR2();
         Mat2x2 b = new Mat2x2();
         b.colX.setX(this.getFilaX().dotProduct(b.colX));
-        b.colX.setX(this.getFilaY().dotProduct(b.colX));
+        b.colY.setX(this.getFilaY().dotProduct(b.colX));
         return retval;
     }
     // multiplicacion por matriz
@@ -148,5 +114,41 @@ public class Mat2x2 {
 
 
         return retval;
+    }
+
+
+    public VecR2 getFilaX(){
+        VecR2 retval = new VecR2(colX.getX(),colY.getX());
+        return retval;
+    }
+
+    public void  setFilaX(VecR2 filaX){
+        this.colX.setX(filaX.getX());
+        this.colY.setX(filaX.getY());
+    }
+
+    public VecR2 getFilaY(){
+        VecR2 retval = new VecR2(colX.getY(),colY.getY());
+        return retval;
+    }
+
+    public void  setFilaY(VecR2 filaY){
+        this.colX.setY(filaY.getX());
+        this.colY.setY(filaY.getY());
+    }
+    public VecR2 getColX() {
+        return colX;
+    }
+
+    public void setColX(VecR2 colX) {
+        this.colX = colX;
+    }
+
+    public VecR2 getColY() {
+        return colY;
+    }
+
+    public void setColY(VecR2 colY) {
+        this.colY = colY;
     }
 }

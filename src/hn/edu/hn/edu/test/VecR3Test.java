@@ -91,7 +91,7 @@ public class VecR3Test {
 
         assertEqualsVecR3( a.crossProduct(b),c,delta);
                 //-5.7; 2.4; 3.3
-        assertEqualsVecR3(b.crossProduct(e),new VecR3(-5.7,2.4,3.3),delta);
+        assertEqualsVecR3(this.b.crossProduct(e),new VecR3(-5.7,2.4,3.3),delta);
 
     }
 
@@ -100,7 +100,7 @@ public class VecR3Test {
         //-5.7; 2.4; 3.3
         VecR3 a = b.crossProduct(e);
         VecR3 b = new VecR3(-5.7,2.4,3.3);
-        assertEquals(a,b);
+        assertEqualsVecR3(a,b,delta);
     }
 
     @Test
