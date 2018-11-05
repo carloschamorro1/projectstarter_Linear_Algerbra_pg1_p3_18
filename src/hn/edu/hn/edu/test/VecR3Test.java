@@ -36,7 +36,7 @@ public class VecR3Test {
         aDb = 0;
         bDd = -4.84 + -1.21 + -9;
         eDe = 3*3 +3*3 + 3*3;
-        dDe = -2.2 * 3 + -1.1 * 3 +3*3;
+        dDe = -2.2 * 3 + -1.1 * 3 + - 3*3;
 
         delta = 0.00001;
     }
@@ -93,6 +93,14 @@ public class VecR3Test {
                 //-5.7; 2.4; 3.3
         assertEquals(b.crossProduct(e),new VecR3(-5.7,2.4,3.3));
 
+    }
+
+    @Test
+    public void miTest(){
+        //-5.7; 2.4; 3.3
+        VecR3 a = b.crossProduct(e);
+        VecR3 b = new VecR3(-5.7,2.4,3.3);
+        assertEquals(a,b);
     }
 
     @Test

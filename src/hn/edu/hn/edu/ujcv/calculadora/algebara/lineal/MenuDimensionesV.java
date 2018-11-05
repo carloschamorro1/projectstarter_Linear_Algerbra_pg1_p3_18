@@ -5,7 +5,13 @@ import hn.edu.hn.edu.ujcv.lib.al.VecR3;
 import hn.edu.hn.edu.ujcv.lib.al.VecR4;
 import hn.edu.ujcv.util.LectorTeclado;
 
+
 public class MenuDimensionesV {
+    private double x;
+    private double y;
+    private double z;
+    private double w;
+    VecR2 b = new VecR2();
     private int opcion;
     LectorTeclado lt = new LectorTeclado();
 
@@ -30,7 +36,12 @@ public class MenuDimensionesV {
                 case 1:
                     VecR2 a1 = new VecR2(1.0,1.1);
                     VecR2 b1 = new VecR2(2.2,3.0);
+//                    x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
+//                    y = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
+//                    b.x = lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido");
+//                    b.y = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
                     VecR2 res1 = a1.add(b1);
+                    //        System.out.println("La suma de vectores es: (" + retval.x +","+ retval.y+ ")");
                     break;
                 case 2:
                     VecR2 a2 = new VecR2(1.0,1.1);
