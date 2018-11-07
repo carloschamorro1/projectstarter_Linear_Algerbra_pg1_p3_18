@@ -11,6 +11,17 @@ public class Mat3x3 {
         colZ = new VecR3(0,0,1);
     }
 
+    public Mat3x3(VecR3 col1, VecR3 col2, VecR3 col3){
+        this.colX = new VecR3(col1);
+        this.colY = new VecR3(col2);
+        this.colZ = new VecR3(col3);
+    }
+
+    public Mat3x3(Mat3x3 b){
+        this.colX = new VecR3(b.colX);
+        this.colY = new VecR3(b.colY);
+        this.colZ = new VecR3(b.colZ);
+    }
     public Mat3x3 suma (Mat3x3 b){
         Mat3x3 retval = new Mat3x3();
         //            cx cy              cx cy
@@ -28,12 +39,9 @@ public class Mat3x3 {
         //   x es   getX , setX
         //   y es   getY , setY
 
-        retval.colX.setX(this.colX.getX() + b.colX.getX());
-        retval.colX.setY(this.colX.getY() + b.colX.getY());
-        retval.colY.setX(this.colY.getX() + b.colY.getX());
-        retval.colY.setY(this.colY.getY() + b.colY.getY());
-        retval.colZ.setZ(this.colY.getX()+ b.colY.getX());
-        retval.colZ.setZ(this.colY.getY()+ b.colY.getY());
+        retval.setColX(this.colX.add(b.colX));
+        retval.setColY(this.colY.add(b.colY));
+        retval.setColZ(this.colZ.add(b.colZ));
         return retval;
     }
 
@@ -54,33 +62,34 @@ public class Mat3x3 {
         //   cy es colY
         //   x es   getX , setX
         //   y es   getY , setY
-        retval.setColX(this.colX.add(b.colX));
-        retval.colX.setX(this.colX.getX() - b.colX.getX());
-        retval.colX.setY(this.colX.getY() - b.colX.getY());
-        retval.colY.setX(this.colY.getX() - b.colY.getX());
-        retval.colY.setY(this.colY.getY() - b.colY.getY());
-        retval.colZ.setZ(this.colY.getX()- b.colY.getX());
-        retval.colZ.setZ(this.colY.getY()- b.colY.getY());
+        retval.setColX(this.colX.sub(b.colX));
+        retval.setColY(this.colY.sub(b.colY));
+        retval.setColZ(this.colZ.sub(b.colZ));
         return retval;
     }
     // multiplicacion escalar
     public  Mat3x3 mul(double alpha){
         Mat3x3 retval = new Mat3x3();
+
         retval.colX.setX(this.colX.getX() * alpha);
         retval.colX.setY(this.colX.getY() * alpha);
-        retval.colY.setX(this.colY.getX() * alpha);
+        retval.colX.setZ(this.colX.getZ() * alpha);
+
+        retval.colY.setX(this.colX.getX() * alpha);
         retval.colY.setY(this.colY.getY() * alpha);
-        retval.colZ.setZ(this.colY.getX() * alpha);
-        retval.colZ.setZ(this.colY.getY() * alpha);
+        retval.colY.setZ(this.colZ.getZ() * alpha);
+
+        retval.colZ.setX(this.colX.getX() * alpha);
+        retval.colZ.setY(this.colY.getY() * alpha);
+        retval.colZ.setZ(this.colX.getZ() * alpha);
         return  retval;
     }
     // multiplicacion vector columna
     public VecR3 mul(VecR3 v){
         VecR3 retval = new VecR3();
-        Mat3x3 b = new Mat3x3();
-        b.colX.setX(this.getFilaX().dotProduct(b.colX));
-        b.colY.setX(this.getFilaY().dotProduct(b.colX));
-        b.colZ.setZ(this.getFilaZ().dotProduct(b.colZ));
+            retval.setX(v.dotProduct(this.getFilaX()));
+            retval.setY(v.dotProduct(this.getFilaY()));
+            retval.setZ(v.dotProduct(this.getFilaZ()));
         return retval;
     }
     // multiplicacion por matriz
@@ -100,12 +109,9 @@ public class Mat3x3 {
         //   cy es colY
         //   x es   getX , setX
         //   y es   getY , setY
-        retval.colX.setX(this.getFilaX().dotProduct(b.colX));
-        retval.colX.setY(this.getFilaY().dotProduct(b.colX));
-        retval.colY.setX(this.getFilaX().dotProduct(b.colY));
-        retval.colY.setY(this.getFilaY().dotProduct(b.colY));
-        retval.colZ.setX(this.getFilaX().dotProduct(b.colX));
-        retval.colZ.setY(this.getFilaY().dotProduct(b.colX));
+        retval.setColX(new VecR3(this.colX.dotProduct(b.getFilaX()),this.colX.dotProduct(b.getFilaY()),this.colX.dotProduct(b.getFilaZ())));
+        retval.setColY(new VecR3(this.colY.dotProduct(b.getFilaX()),this.colY.dotProduct(b.getFilaY()),this.colY.dotProduct(b.getFilaZ())));
+        retval.setColZ(new VecR3(this.colZ.dotProduct(b.getFilaX()),this.colZ.dotProduct(b.getFilaY()),this.colZ.dotProduct(b.getFilaZ())));
         return retval;
     }
 
