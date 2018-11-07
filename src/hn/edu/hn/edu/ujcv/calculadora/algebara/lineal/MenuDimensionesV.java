@@ -122,7 +122,7 @@ public class MenuDimensionesV {
                     b2.setY (lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido"));
                     b2.setZ(lt.leerReal("Ingrese el tercer numero del primer vector", "Error! Ha ingresado un caracter no valido"));
                     VecR3 res2 = a2.sub(b2);
-                    System.out.println("La suma de vectores es: (" + res2.getX() +","+ res2.getY()+ ","+ res2.getZ()+ ")");
+                    System.out.println("La resta de vectores es: (" + res2.getX() +","+ res2.getY()+ ","+ res2.getZ()+ ")");
                     break;
                 case 3:
                     VecR3 a3 = new VecR3(1.0,1.1,1.0);
