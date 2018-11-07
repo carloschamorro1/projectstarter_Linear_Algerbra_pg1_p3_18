@@ -67,12 +67,69 @@ public class Mat4x4 {
         //   cy es colY
         //   x es   getX , setX
         //   y es   getY , setY
-        retval.colX.setX(this.colX.getX() - b.colX.getX());
-        retval.colX.setY(this.colX.getY() - b.colX.getY());
-        retval.colY.setX(this.colY.getX() - b.colY.getX());
-        retval.colY.setY(this.colY.getY() - b.colY.getY());
-        retval.colZ.setZ(this.colY.getX()- b.colY.getX());
-        retval.colZ.setZ(this.colY.getY()- b.colY.getY());
+        retval.setColX(this.colX.sub(b.colX));
+        retval.setColY(this.colY.sub(b.colY));
+        retval.setColZ(this.colZ.sub(b.colZ));
+        retval.setColW(this.colW.sub(b.colW));
+        return retval;
+    }
+
+    // multiplicacion escalar
+    public  Mat4x4 mul(double alpha){
+        Mat4x4 retval = new Mat4x4();
+
+        retval.colX.setX(this.colX.getX() * alpha);
+        retval.colX.setY(this.colX.getY() * alpha);
+        retval.colX.setZ(this.colX.getZ() * alpha);
+        retval.colX.setW(this.colX.getW() * alpha);
+
+        retval.colY.setX(this.colY.getX() * alpha);
+        retval.colY.setY(this.colY.getY() * alpha);
+        retval.colY.setZ(this.colY.getZ() * alpha);
+        retval.colY.setW(this.colY.getW() * alpha);
+
+        retval.colZ.setX(this.colZ.getX() * alpha);
+        retval.colZ.setY(this.colZ.getY() * alpha);
+        retval.colZ.setZ(this.colZ.getZ() * alpha);
+        retval.colZ.setW(this.colZ.getW() * alpha);
+
+        retval.colW.setX(this.colW.getX() * alpha);
+        retval.colW.setY(this.colW.getY() * alpha);
+        retval.colW.setZ(this.colW.getZ() * alpha);
+        retval.colW.setW(this.colW.getW() * alpha);
+
+        return  retval;
+    }
+    // multiplicacion vector columna
+    public VecR4 mul(VecR4 v){
+        VecR4 retval = new VecR4();
+        retval.setX(v.dotProduct(this.getFilaX()));
+        retval.setY(v.dotProduct(this.getFilaY()));
+        retval.setZ(v.dotProduct(this.getFilaZ()));
+        retval.setW(v.dotProduct(this.getFilaW()));
+        return retval;
+    }
+    // multiplicacion por matriz
+    public Mat4x4 mul (Mat4x4 b){
+        Mat4x4 retval =  new Mat4x4();
+        //            cx cy              cx cy
+        // dado A  x| 1  2 |  dado b  |  1  1 | fx
+        //          y| 2  3 |          |  0  0 | fy
+        //             x  y
+        //   retval:
+        //   |   a.fx.dot(b.cx)   a.fx.dot(b.cy) |
+        //   |   a.fy.dot(b.cx)   a.fy.dot(b.cy) |
+        //
+        //   a es this.
+        //   b es b
+        //   cx es colX
+        //   cy es colY
+        //   x es   getX , setX
+        //   y es   getY , setY
+        retval.setColX(new VecR4(this.colX.dotProduct(b.getFilaX()),this.colX.dotProduct(b.getFilaY()),this.colX.dotProduct(b.getFilaZ()),this.colX.dotProduct(b.getFilaW())));
+        retval.setColY(new VecR4(this.colY.dotProduct(b.getFilaX()),this.colY.dotProduct(b.getFilaY()),this.colY.dotProduct(b.getFilaZ()),this.colY.dotProduct(b.getFilaW())));
+        retval.setColZ(new VecR4(this.colZ.dotProduct(b.getFilaX()),this.colZ.dotProduct(b.getFilaY()),this.colZ.dotProduct(b.getFilaZ()),this.colZ.dotProduct(b.getFilaW())));
+        retval.setColW(new VecR4(this.colW.dotProduct(b.getFilaX()),this.colW.dotProduct(b.getFilaY()),this.colW.dotProduct(b.getFilaZ()),this.colW.dotProduct(b.getFilaW())));
         return retval;
     }
 

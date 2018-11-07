@@ -75,13 +75,13 @@ public class Mat3x3 {
         retval.colX.setY(this.colX.getY() * alpha);
         retval.colX.setZ(this.colX.getZ() * alpha);
 
-        retval.colY.setX(this.colX.getX() * alpha);
+        retval.colY.setX(this.colY.getX() * alpha);
         retval.colY.setY(this.colY.getY() * alpha);
-        retval.colY.setZ(this.colZ.getZ() * alpha);
+        retval.colY.setZ(this.colY.getZ() * alpha);
 
-        retval.colZ.setX(this.colX.getX() * alpha);
-        retval.colZ.setY(this.colY.getY() * alpha);
-        retval.colZ.setZ(this.colX.getZ() * alpha);
+        retval.colZ.setX(this.colZ.getX() * alpha);
+        retval.colZ.setY(this.colZ.getY() * alpha);
+        retval.colZ.setZ(this.colZ.getZ() * alpha);
         return  retval;
     }
     // multiplicacion vector columna
