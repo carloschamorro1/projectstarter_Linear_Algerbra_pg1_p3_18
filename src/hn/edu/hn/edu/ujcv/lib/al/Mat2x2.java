@@ -70,10 +70,8 @@ public class Mat2x2 {
         //   cy es colY
         //   x es   getX , setX
         //   y es   getY , setY
-        retval.colX.setX(this.colX.getX() - b.colX.getX());
-        retval.colX.setY(this.colX.getY() - b.colX.getY());
-        retval.colY.setX(this.colY.getX() - b.colY.getX());
-        retval.colY.setY(this.colY.getY() - b.colY.getY());
+        retval.setColX(this.colX.sub(b.colX));
+        retval.setColY(this.colY.sub(b.colY));
         return retval;
     }
     // multiplicacion escalar
@@ -109,12 +107,8 @@ public class Mat2x2 {
         //   cy es colY
         //   x es   getX , setX
         //   y es   getY , setY
-        retval.colX.setX(this.getFilaX().dotProduct(b.colX));
-        retval.colX.setY(this.getFilaY().dotProduct(b.colX));
-        retval.colY.setX(this.getFilaX().dotProduct(b.colY));
-        retval.colY.setY(this.getFilaY().dotProduct(b.colY));
-
-
+        retval.setColX(new VecR2(this.colX.dotProduct(b.getFilaX()),this.colX.dotProduct(b.getFilaY())));
+        retval.setColY(new VecR2(this.colY.dotProduct(b.getFilaX()),this.colY.dotProduct(b.getFilaY())));
         return retval;
     }
 
