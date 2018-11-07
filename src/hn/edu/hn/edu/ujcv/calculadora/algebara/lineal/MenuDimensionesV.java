@@ -40,22 +40,41 @@ public class MenuDimensionesV {
                 case 2:
                     VecR2 a2 = new VecR2(1.0,1.1);
                     VecR2 b2 = new VecR2(2.2,3.0);
+                    a2.setX(lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido"));
+                    a2.setY(lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido"));
+                    b2.setX(lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido"));
+                    b2.setY (lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido"));
                    VecR2 res2 = a2.sub(b2);
+                    System.out.println("La resta de vectores es: (" + res2.getX() +","+ res2.getY()+ ")");
                     break;
                 case 3:
                     VecR2 a3 = new VecR2(1.0,1.1);
                     double alpha1 = 0;
+                    alpha1 = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
+                    a3.setX(lt.leerReal("Ingrese el primer numero vector","Error! Ha ingresado un caracter no valido"));
+                    a3.setY(lt.leerReal("Ingrese el segundo numero vector","Error! Ha ingresado un caracter no valido"));
                     VecR2 res3 = a3.mul(alpha1);
+                    System.out.println("La multiplicacion por un escalar es: (" + res3.getX() +","+ res3.getY()+ ")");
                     break;
                 case 4:
                     VecR2 a4 = new VecR2(1.0,1.1);
                     VecR2 b4 = new VecR2(1.0,1.1);
-                    a4.dotProduct(b4);
+                    a4.setX(lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido"));
+                    a4.setY(lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido"));
+                    b4.setX(lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido"));
+                    b4.setY (lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido"));
+                    double x = a4.dotProduct(b4);
+                    System.out.println("El producto punto es: (" + x + ")");
                     break;
                 case 5:
                     VecR2 a5 = new VecR2(1.0,1.1);
                     double alpha2 = 0;
-                    a5.div(alpha2);
+                    alpha2 = lt.leerReal("Ingrese el escalar", "Error! Ha ingresado un caracter no valido");
+                    a5.setX(lt.leerReal("Ingrese el primer numero vector","Error! Ha ingresado un caracter no valido"));
+                    a5.setY(lt.leerReal("Ingrese el segundo numero vector","Error! Ha ingresado un caracter no valido"));
+                    VecR2 res4 = a5.div(alpha2);
+                    System.out.println("La division del vector entre un escalar es: (" + String.format("%.2f",res4.getX()) + "y:"
+                            + String.format("%.2f",res4.getY()));
                     break;
                 case 6:
                     System.out.println("Has regresado al menu principal \n \n");
