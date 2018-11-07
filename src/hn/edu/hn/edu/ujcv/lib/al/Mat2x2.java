@@ -20,7 +20,15 @@ public class Mat2x2 {
         colY = new VecR2(0,1);
     }
 
+    public Mat2x2(VecR2 col1, VecR2 col2){
+        this.colX = new VecR2(col1);
+        this.colY = new VecR2(col2);
+    }
 
+    public Mat2x2(Mat2x2 b){
+        this.colX = new VecR2(b.colX);
+        this.colY = new VecR2(b.colY);
+    }
     // este contrato debe estar en las demas matrices
     // y no debe variar mas que en la dimencion de los objetos
     // retornados y recibidos.
