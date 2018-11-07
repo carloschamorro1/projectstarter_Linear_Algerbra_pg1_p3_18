@@ -1,12 +1,10 @@
 package hn.edu.hn.edu.ujcv.lib.al;
 
-import hn.edu.ujcv.util.LectorTeclado;
-
 public class VecR3 {
     private double x;
     private double y;
     private double z;
-    LectorTeclado lt = new LectorTeclado();
+
     public VecR3()
     {
         this.x = 0;
@@ -26,10 +24,6 @@ public class VecR3 {
         this.y = b.y;
         this.z = b.z;
     }
-    //todo: Definir variables y constructores
-
-
-    //todo: conformar al contrato de un vector
 
     public VecR3 add(VecR3 b){
         VecR3 retval = new VecR3();
@@ -56,7 +50,7 @@ public class VecR3 {
     }
 
     public double dotProduct(VecR3 b){
-        double retval = 0.0;
+        double retval;
         retval = (this.x*b.x)+(this.y*b.y)+(this.z*b.z);
         return retval;
     }
