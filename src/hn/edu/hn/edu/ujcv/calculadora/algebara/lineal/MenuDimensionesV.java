@@ -7,10 +7,6 @@ import hn.edu.ujcv.util.LectorTeclado;
 
 
 public class MenuDimensionesV {
-    private double x;
-    private double y;
-    private double z;
-    private double w;
     private int opcion;
     LectorTeclado lt = new LectorTeclado();
 
@@ -30,18 +26,16 @@ public class MenuDimensionesV {
     }
 
     public int procesarOpcionR2(int opcion) {
-        VecR2 b = new VecR2();
-            //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
                     VecR2 a1 = new VecR2(1.0,1.1);
                     VecR2 b1 = new VecR2(2.2,3.0);
-                    x = lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido");
-                    y = lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido");
-                    b.setX(lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido"));
-//                    b. = lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido");
+                    a1.setX(lt.leerReal("Ingrese el primer numero del primer vector","Error! Ha ingresado un caracter no valido"));
+                    a1.setY(lt.leerReal("Ingrese el segundo numero del primer vector", "Error! Ha ingresado un caracter no valido"));
+                    b1.setX(lt.leerReal("Ingrese el primer numero del segundo vector","Error! Ha ingresado un caracter no valido"));
+                    b1.setY (lt.leerReal("Ingrese el segundo numero del primer vector","Error! Ha ingresado un caracter no valido"));
                     VecR2 res1 = a1.add(b1);
-                    //        System.out.println("La suma de vectores es: (" + retval.x +","+ retval.y+ ")");
+                    System.out.println("La suma de vectores es: (" + res1.getX() +","+ res1.getY()+ ")");
                     break;
                 case 2:
                     VecR2 a2 = new VecR2(1.0,1.1);
@@ -86,7 +80,6 @@ public class MenuDimensionesV {
     }
 
     public int procesarOpcionR3(int opcion) {
-            //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
                     VecR3 a1 = new VecR3(1.0,1.1,1.0);
@@ -140,7 +133,6 @@ public class MenuDimensionesV {
     }
 
     public int procesarOpcionR4(int opcion) {
-            //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion) {
                 case 1:
                     VecR4 a1 = new VecR4(1.0,1.1,1.0,1.0);

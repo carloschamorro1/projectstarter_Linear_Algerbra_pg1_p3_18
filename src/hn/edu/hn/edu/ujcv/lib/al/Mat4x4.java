@@ -64,7 +64,7 @@ public class Mat4x4 {
         retval.colZ.setZ(this.colY.getY()- b.colY.getY());
         return retval;
     }
-    
+
     public VecR4 getFilaX(){
         VecR4 retval = new VecR4(colX.getX(),colY.getX(), colZ.getZ(), colW.getW());
         return retval;

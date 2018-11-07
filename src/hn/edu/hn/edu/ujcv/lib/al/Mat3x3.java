@@ -54,6 +54,7 @@ public class Mat3x3 {
         //   cy es colY
         //   x es   getX , setX
         //   y es   getY , setY
+        retval.setColX(this.colX.add(b.colX));
         retval.colX.setX(this.colX.getX() - b.colX.getX());
         retval.colX.setY(this.colX.getY() - b.colX.getY());
         retval.colY.setX(this.colY.getX() - b.colY.getX());

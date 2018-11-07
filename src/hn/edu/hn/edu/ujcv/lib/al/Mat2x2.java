@@ -49,13 +49,8 @@ public class Mat2x2 {
         //   cy es colY
         //   x es   getX , setX
         //   y es   getY , setY
-
-        retval.colX.setX(this.colX.getX() + b.colX.getX());
-        retval.colX.setY(this.colX.getY() + b.colX.getY());
-        retval.colY.setX(this.colY.getX() + b.colY.getX());
-        retval.colY.setY(this.colY.getY() + b.colY.getY());
-
-
+        retval.setColX(this.colX.add(b.colX));
+        retval.setColY(this.colY.add(b.colY));
          return retval;
     }
     // resta
@@ -93,9 +88,8 @@ public class Mat2x2 {
     // multiplicacion vector columna
     public VecR2 mul(VecR2 v){
         VecR2 retval = new VecR2();
-        Mat2x2 b = new Mat2x2();
-        b.colX.setX(this.getFilaX().dotProduct(b.colX));
-        b.colY.setX(this.getFilaY().dotProduct(b.colX));
+        retval.setX(v.dotProduct(this.getFilaX()));
+        retval.setY(v.dotProduct(this.getFilaY()));
         return retval;
     }
     // multiplicacion por matriz
