@@ -13,6 +13,19 @@ public class Mat4x4 {
         colW = new VecR4(0,0,0,1);
     }
 
+    public Mat4x4(VecR4 col1, VecR4 col2, VecR4 col3, VecR4 col4){
+        this.colX = new VecR4(col1);
+        this.colY = new VecR4(col2);
+        this.colZ = new VecR4(col3);
+        this.colW = new VecR4(col4);
+    }
+
+    public Mat4x4(Mat4x4 b){
+        this.colX = new VecR4(b.colX);
+        this.colY = new VecR4(b.colY);
+        this.colZ = new VecR4(b.colZ);
+        this.colW = new VecR4(b.colW);
+    }
     public Mat4x4 suma (Mat4x4 b){
         Mat4x4 retval = new Mat4x4();
         //            cx cy              cx cy
@@ -30,12 +43,10 @@ public class Mat4x4 {
         //   x es   getX , setX
         //   y es   getY , setY
 
-        retval.colX.setX(this.colX.getX() + b.colX.getX());
-        retval.colX.setY(this.colX.getY() + b.colX.getY());
-        retval.colY.setX(this.colY.getX() + b.colY.getX());
-        retval.colY.setY(this.colY.getY() + b.colY.getY());
-        retval.colZ.setZ(this.colZ.getX()+ b.colZ.getX());
-        retval.colZ.setZ(this.colZ.getY()+ b.colZ.getY());
+        retval.setColX(this.colX.add(b.colX));
+        retval.setColY(this.colY.add(b.colY));
+        retval.setColZ(this.colZ.add(b.colZ));
+        retval.setColW(this.colW.add(b.colW));
         return retval;
     }
 
