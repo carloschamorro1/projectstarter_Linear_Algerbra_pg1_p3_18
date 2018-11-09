@@ -51,7 +51,7 @@ public class VecR3 {
 
     public double dotProduct(VecR3 b){
         double retval;
-        retval = (this.x*b.x)+(this.y*b.y)+(this.z*b.z);
+        retval = (this.x * b.x)+(this.y*b.y)+(this.z*b.z);
         return retval;
     }
 

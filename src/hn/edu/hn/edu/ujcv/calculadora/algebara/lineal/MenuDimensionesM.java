@@ -29,16 +29,31 @@ public class MenuDimensionesM {
         //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
         switch (opcion) {
             case 1:
-                Mat2x2 mat1 = leerMatriz("Matriz 1", "Ingrese la matriz 1", "Error de la matriz");
-                Mat2x2 mat2 = leerMatriz("\n Matriz 2", "Ingrese la matriz 2", "Error de la matriz");
+                Mat2x2 mat1 = leerMatriz("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat2x2 mat2 = leerMatriz("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
                 Mat2x2 res1 = mat1.suma(mat2);
                 imprimirMatriz(res1);
                 break;
             case 2:
+                Mat2x2 mat3 = leerMatriz("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat2x2 mat4 = leerMatriz("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                Mat2x2 res2 = mat3.resta(mat4);
+                imprimirMatriz(res2);
                 break;
             case 3:
+                double alpha = 0;
+                alpha = lt.leerEntero("Ingrese el escalar", "Error ha ingresado un caracter no valido");
+                Mat2x2 mat5 = leerMatriz("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat2x2 res3 = mat5.mulEscalar(alpha);
+                imprimirMatriz(res3);
                 break;
             case 4:
+                Mat2x2 mat6 = leerMatriz("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                VecR2 v = new VecR2(0,1);
+                v.setX(lt.leerReal("Ingrese el primer numero vector","Error! Ha ingresado un caracter no valido"));
+                v.setY(lt.leerReal("Ingrese el segundo numero vector","Error! Ha ingresado un caracter no valido"));
+                VecR2 res4 = mat6.mulVector(v);
+                System.out.println("La multiplicacion de matriz por vector es : ( "+ res4.getX() + "," + res4.getY() + ")");
                 break;
             case 5:
                 break;
@@ -142,7 +157,6 @@ public class MenuDimensionesM {
     }
 
     public void imprimirMatriz(Mat2x2 a){
-
         System.out.println("\n La suma de matrices es");
         System.out.println("|\t" + a.getFilaX().getX() + "  " + a.getFilaX().getY() + "\t|");
         System.out.println("|\t" + a.getFilaY().getX() + "  " + a.getFilaY().getY() + "\t|");
