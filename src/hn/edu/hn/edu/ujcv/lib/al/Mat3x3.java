@@ -42,6 +42,7 @@ public class Mat3x3 {
         retval.setColX(this.colX.add(b.colX));
         retval.setColY(this.colY.add(b.colY));
         retval.setColZ(this.colZ.add(b.colZ));
+
         return retval;
     }
 
