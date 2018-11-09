@@ -9,6 +9,7 @@ import hn.edu.ujcv.util.LectorTeclado;
 public class MenuDimensionesM {
     private int opcion;
     LectorTeclado lt = new LectorTeclado();
+
     public void presentarOpciones2x2() {
         System.out.println("\t \t \t \t Matrices de 2x2");
         System.out.println("1.............. Suma");
@@ -25,40 +26,28 @@ public class MenuDimensionesM {
     }
 
     public int procesarOpcion2x2(int opcion) {
-            //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
-            switch (opcion) {
-                case 1: ;
-                    VecR2 col1x = new VecR2(1,0);
-                    VecR2 col1y = new VecR2(0,1);
-                    VecR2 col2x = new VecR2(1,0);
-                    VecR2 col2y = new VecR2(0,1);
-                    Mat2x2 a1 = new Mat2x2(col1x, col1y);
-                    Mat2x2 a2 = new Mat2x2(col1x, col1y);
-                    col1x.setX(lt.leerReal("Ingrese el primer numero de la primera fila de la matriz 1", "Error ha ingresado un caracter no valido"));
-                    col1x.setY(lt.leerReal("Ingrese el segundo numero de la primera fila de la matriz 1", "Error ha ingresado un caracter no valido"));
-                    col1y.setX(lt.leerReal("Ingrese el primer numero  de la segunda fila de la matriz 1", "Error ha ingresado un caracter no valido"));
-                    col1y.setY(lt.leerReal("Ingrese el segundo numero de la segunda fila de la matriz 1", "Error ha ingresado un caracter no valido"));
-                    col2x.setX(lt.leerReal("Ingrese el primer numero de la primera fila de la matriz 2", "Error ha ingresado un caracter no valido"));
-                    col2x.setY(lt.leerReal("Ingrese el segundo numero de la primera fila de la matriz 2", "Error ha ingresado un caracter no valido"));
-                    col2y.setX(lt.leerReal("Ingrese el primer numero  de la segunda fila de la matriz 2", "Error ha ingresado un caracter no valido"));
-                    col2y.setY(lt.leerReal("Ingrese el segundo numero de la segunda fila de la matriz 2", "Error ha ingresado un caracter no valido"));
-                    Mat2x2 res1 = a1.suma(a2);
-                    System.out.println("|" + col1x.getX()+ " "+ col1x.getY()+ "|");
-                    System.out.println("|" + col1y.getX()+ " "+ col1y.getY()+ "|");
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    System.out.println("Has regresado al menu principal \n \n");
-                    break;
-            }
-        return opcion;}
+        //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
+        switch (opcion) {
+            case 1:
+                Mat2x2 mat1 = leerMatriz("Matriz 1", "Ingrese la matriz 1", "Error de la matriz");
+                Mat2x2 mat2 = leerMatriz("\n Matriz 2", "Ingrese la matriz 2", "Error de la matriz");
+                Mat2x2 res1 = mat1.suma(mat2);
+                imprimirMatriz(res1);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                System.out.println("Has regresado al menu principal \n \n");
+                break;
+        }
+        return opcion;
+    }
 
     public void presentarOpciones3x3() {
         System.out.println("\t \t \t \t Matrices de 3x3");
@@ -77,23 +66,25 @@ public class MenuDimensionesM {
 
     public int procesarOpcion3x3(int opcion) {
 
-            //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
-            switch (opcion) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    System.out.println("Has regresado al menu principal \n \n");
-                    break;
-            }
-        return opcion;}
+        //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
+        switch (opcion) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                System.out.println("Has regresado al menu principal \n \n");
+                break;
+        }
+        return opcion;
+    }
+
     public void presentarOpciones4x4() {
         System.out.println("\t \t \t \t Matrices de 4x4");
         System.out.println("1.............. Suma");
@@ -110,23 +101,52 @@ public class MenuDimensionesM {
     }
 
     public int procesarOpcion4x4(int opcion) {
-            //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
-            switch (opcion) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    System.out.println("Has regresado al menu principal \n \n");
-                    break;
+        //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
+        switch (opcion) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                System.out.println("Has regresado al menu principal \n \n");
+                break;
+        }
+        return opcion;
+    }
+
+    public Mat2x2 leerMatriz(String nombreMatriz, String mensaje, String mensajeError) {
+        VecR2 colx = new VecR2(1, 0);
+        VecR2 coly = new VecR2(0, 1);
+        // mensaje:
+        // ingrese el valor de fila %i, columna %i de matriz n
+        System.out.println(nombreMatriz);
+        for (int i = 1; i < 3; i++) {
+            for (int j = 1; j < 3; j++) {
+                if (i == 1 && j == 1)
+                    colx.setX(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 1 && j == 2)
+                    coly.setX(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 2 && j == 1)
+                    colx.setY(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 2 && j == 2)
+                    coly.setY(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
             }
-        return opcion;}
+        }
+        return new Mat2x2(colx,coly);
+    }
+
+    public void imprimirMatriz(Mat2x2 a){
+
+        System.out.println("\n La suma de matrices es");
+        System.out.println("|\t" + a.getFilaX().getX() + "  " + a.getFilaX().getY() + "\t|");
+        System.out.println("|\t" + a.getFilaY().getX() + "  " + a.getFilaY().getY() + "\t|");
+    }
 }
 
 
