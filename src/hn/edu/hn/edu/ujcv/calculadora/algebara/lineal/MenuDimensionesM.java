@@ -154,8 +154,18 @@ public class MenuDimensionesM {
     public int procesarOpcion4x4(int opcion) {
         switch (opcion) {
             case 1:
+                Mat4x4 mat1 = leerMatriz4x4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat4x4 mat2 = leerMatriz4x4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                Mat4x4 res1 = mat1.suma(mat2);
+                System.out.println("La suma de matrices es \n");
+                imprimirMatriz4x4(res1);
                 break;
             case 2:
+                Mat4x4 mat3 = leerMatriz4x4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat4x4 mat4 = leerMatriz4x4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                Mat4x4 res2 = mat3.suma(mat4);
+                System.out.println("La suma de matrices es \n");
+                imprimirMatriz4x4(res2);
                 break;
             case 3:
                 break;
@@ -281,6 +291,13 @@ public class MenuDimensionesM {
         System.out.println("|\t" + a.getColX().getX() + "  " + a.getColY().getX() + "  " + a.getColZ().getX() + "\t|");
         System.out.println("|\t" + a.getColX().getY() + "  " + a.getColY().getY() + "  " + a.getColZ().getY() + "\t|");
         System.out.println("|\t" + a.getColX().getZ() + "  " + a.getColY().getZ() + "  " + a.getColZ().getZ() + "\t|");
+    }
+
+    public void imprimirMatriz4x4(Mat4x4 a){
+        System.out.println("|\t" + a.getColX().getX() + "  " + a.getColY().getX() + "  " + a.getColZ().getX() + "  "+ a.getColW().getX() + "\t|");
+        System.out.println("|\t" + a.getColX().getY() + "  " + a.getColY().getY() + "  " + a.getColZ().getY() + "  "+ a.getColW().getY() + "\t|");
+        System.out.println("|\t" + a.getColX().getZ() + "  " + a.getColY().getZ() + "  " + a.getColZ().getZ() + "  "+ a.getColW().getZ() + "\t|");
+        System.out.println("|\t" + a.getColX().getW() + "  " + a.getColY().getW() + "  " + a.getColZ().getW() + "  "+ a.getColW().getW() + "\t|");
     }
 }
 
