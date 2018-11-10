@@ -94,6 +94,11 @@ public class MenuDimensionesM {
                 imprimirMatriz3x3(res1);
                 break;
             case 2:
+                Mat3x3 mat3 = leerMatriz3x3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat3x3 mat4 = leerMatriz3x3("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                Mat3x3 res2 = mat3.resta(mat4);
+                System.out.println("La suma de matrices es \n");
+                imprimirMatriz3x3(res2);
                 break;
             case 3:
                 break;
@@ -201,9 +206,9 @@ public class MenuDimensionesM {
     }
 
     public void imprimirMatriz3x3(Mat3x3 a){
-        System.out.println("|\t" + a.getFilaX().getX() + "  " + a.getFilaX().getY() + "  " + a.getFilaX().getZ() + "\t|");
-        System.out.println("|\t" + a.getFilaY().getX() + "  " + a.getFilaY().getY() + "  " + a.getFilaY().getZ() + "\t|");
-        System.out.println("|\t" + a.getFilaZ().getX() + "  " + a.getFilaZ().getY() + "  " + a.getFilaZ().getZ() + "\t|");
+        System.out.println("|\t" + a.getColX().getX() + "  " + a.getColY().getX() + "  " + a.getColZ().getX() + "\t|");
+        System.out.println("|\t" + a.getColX().getY() + "  " + a.getColY().getY() + "  " + a.getColZ().getY() + "\t|");
+        System.out.println("|\t" + a.getColX().getZ() + "  " + a.getColY().getZ() + "  " + a.getColZ().getZ() + "\t|");
     }
 }
 

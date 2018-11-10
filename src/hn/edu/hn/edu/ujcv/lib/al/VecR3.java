@@ -86,6 +86,7 @@ public class VecR3 {
         this.y = y;
     }
 
+
     public double getZ() {
         return z;
     }
