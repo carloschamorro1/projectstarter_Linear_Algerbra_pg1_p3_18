@@ -101,6 +101,12 @@ public class MenuDimensionesM {
                 imprimirMatriz3x3(res2);
                 break;
             case 3:
+                double alpha = 0;
+                alpha = lt.leerEntero("Ingrese el escalar", "Error ha ingresado un caracter no valido");
+                Mat3x3 mat5 = leerMatriz3x3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat3x3 res3 = mat5.mulEscalar(alpha);
+                System.out.println("La multiplicacion de una matriz por un escalar es \n");
+                imprimirMatriz3x3(res3);
                 break;
             case 4:
                 break;
