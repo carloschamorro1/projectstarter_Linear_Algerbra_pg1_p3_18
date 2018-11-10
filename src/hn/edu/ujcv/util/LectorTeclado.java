@@ -1,16 +1,9 @@
 package hn.edu.ujcv.util;
 
-
-import hn.edu.hn.edu.ujcv.lib.al.VecR2;
-
 import java.util.Scanner;
 
 public class LectorTeclado {
     private Scanner mSc;
-    private double x;
-    private double y;
-    private double z;
-    private double w;
 
     public LectorTeclado(){
         Scanner sc = new Scanner(System.in);
@@ -22,14 +15,14 @@ public class LectorTeclado {
          mSc = sc;
     }
 
-    public int leerReal(String mensaje, String mensajeError){
-        int retval = 0;
+    public double leerReal(String mensaje, String mensajeError){
+        double retval = 0;
         System.out.println(mensaje);
         while(!mSc.hasNextDouble()){
             mSc.nextLine();
             System.out.println(mensajeError);
         }
-        retval = mSc.nextInt();
+        retval = mSc.nextDouble();
         return retval;
     }
 
@@ -44,19 +37,4 @@ public class LectorTeclado {
         return retval;
     }
 
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
 }
