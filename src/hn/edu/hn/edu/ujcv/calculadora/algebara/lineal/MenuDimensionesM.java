@@ -201,26 +201,75 @@ public class MenuDimensionesM {
         for (int i = 1; i < 4; i++) {
             for (int j = 1; j < 4; j++) {
                 if (i == 1 && j == 1)
+                    colx.setX(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 1 && j == 2)
+                    coly.setX(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 1 && j == 3)
+                    colz.setX(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 2 && j == 1)
+                    colx.setY(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 2 && j == 2)
+                    coly.setY(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 2 && j == 3)
+                    colz.setY(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 3 && j == 1)
+                    colx.setZ(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 3 && j == 2)
+                    coly.setZ(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 3 && j == 3)
+                    colz.setZ(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+            }
+        }
+        return new Mat3x3(colx,coly,colz);
+    }
+
+    public Mat4x4 leerMatriz4x4(String nombreMatriz, String mensaje, String mensajeError) {
+        VecR4 colx = new VecR4(1,0,0,0);
+        VecR4 coly = new VecR4(0, 1,0,0);
+        VecR4 colz = new VecR4(0,0,1,0);
+        VecR4 colw = new VecR4(0,0,1,0);
+        // mensaje:
+        // ingrese el valor de fila %i, columna %i de matriz n
+        System.out.println(nombreMatriz);
+        for (int i = 1; i < 5; i++) {
+            for (int j = 1; j < 5; j++) {
+                if (i == 1 && j == 1)
                     colx.setX(lt.leerReal("1Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
                 if (i == 1 && j == 2)
                     coly.setX(lt.leerReal("2Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
                 if (i == 1 && j == 3)
                     colz.setX(lt.leerReal("3Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 1 && j == 4)
+                    colw.setX(lt.leerReal("4Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
                 if (i == 2 && j == 1)
-                    colx.setY(lt.leerReal("4Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    colx.setY(lt.leerReal("5Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
                 if (i == 2 && j == 2)
-                    coly.setY(lt.leerReal("5Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    coly.setY(lt.leerReal("6Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
                 if (i == 2 && j == 3)
-                    colz.setY(lt.leerReal("6Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    colz.setY(lt.leerReal("7Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 2 && j == 4)
+                    colw.setY(lt.leerReal("8Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
                 if (i == 3 && j == 1)
-                    colx.setZ(lt.leerReal("7Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    colx.setZ(lt.leerReal("9Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
                 if (i == 3 && j == 2)
-                    coly.setZ(lt.leerReal("8Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    coly.setZ(lt.leerReal("10Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
                 if (i == 3 && j == 3)
-                    colz.setZ(lt.leerReal("9Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                    colz.setZ(lt.leerReal("11Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 3 && j == 4)
+                    colw.setZ(lt.leerReal("12Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 4 && j == 1)
+                    colx.setW(lt.leerReal("13Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 4 && j == 2)
+                    coly.setW(lt.leerReal("14Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 4 && j == 3)
+                    colz.setW(lt.leerReal("15Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
+                if (i == 4 && j == 4)
+                    colw.setW(lt.leerReal("16Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
             }
+
+
         }
-        return new Mat3x3(colx,coly,colz);
+        return new Mat4x4(colx,coly,colz,colw);
     }
 
     public void imprimirMatriz2x2(Mat2x2 a){

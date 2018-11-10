@@ -134,7 +134,7 @@ public class Mat4x4 {
     }
 
     public VecR4 getFilaX(){
-        VecR4 retval = new VecR4(colX.getX(),colY.getX(), colZ.getZ(), colW.getW());
+        VecR4 retval = new VecR4(colX.getX(),colY.getX(), colZ.getX(), colW.getX());
         return retval;
     }
 
@@ -146,7 +146,7 @@ public class Mat4x4 {
     }
 
     public VecR4 getFilaY(){
-        VecR4 retval = new VecR4(colX.getY(),colY.getY(),colZ.getZ(),colW.getW());
+        VecR4 retval = new VecR4(colX.getY(),colY.getY(),colZ.getY(),colW.getY());
         return retval;
     }
 
@@ -158,7 +158,7 @@ public class Mat4x4 {
     }
 
     public VecR4 getFilaZ(){
-        VecR4 retval = new VecR4(colX.getY(),colY.getY(),colZ.getZ(),colW.getW());
+        VecR4 retval = new VecR4(colX.getZ(),colY.getZ(),colZ.getZ(),colW.getZ());
         return retval;
     }
 
@@ -170,7 +170,7 @@ public class Mat4x4 {
     }
 
     public VecR4 getFilaW(){
-        VecR4 retval = new VecR4(colX.getY(),colY.getY(),colZ.getZ(),colW.getW());
+        VecR4 retval = new VecR4(colX.getW(),colY.getW(),colZ.getW(),colW.getW());
         return retval;
     }
 
