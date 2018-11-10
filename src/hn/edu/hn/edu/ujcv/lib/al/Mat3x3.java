@@ -69,7 +69,7 @@ public class Mat3x3 {
         return retval;
     }
     // multiplicacion escalar
-    public  Mat3x3 mul(double alpha){
+    public  Mat3x3 mulEscalar(double alpha){
         Mat3x3 retval = new Mat3x3();
 
         retval.colX.setX(this.colX.getX() * alpha);
@@ -86,7 +86,7 @@ public class Mat3x3 {
         return  retval;
     }
     // multiplicacion vector columna
-    public VecR3 mul(VecR3 v){
+    public VecR3 mulVector(VecR3 v){
         VecR3 retval = new VecR3();
             retval.setX(v.dotProduct(this.getFilaX()));
             retval.setY(v.dotProduct(this.getFilaY()));
@@ -117,7 +117,7 @@ public class Mat3x3 {
     }
 
     public VecR3 getFilaX(){
-        VecR3 retval = new VecR3(colX.getX(),colY.getX(), colZ.getZ());
+        VecR3 retval = new VecR3(colX.getX(),colY.getX(), colZ.getX());
         return retval;
     }
 
@@ -128,7 +128,7 @@ public class Mat3x3 {
     }
 
     public VecR3 getFilaY(){
-        VecR3 retval = new VecR3(colX.getY(),colY.getY(),colZ.getZ());
+        VecR3 retval = new VecR3(colX.getY(),colY.getY(),colZ.getY());
         return retval;
     }
 
@@ -139,7 +139,7 @@ public class Mat3x3 {
     }
 
     public VecR3 getFilaZ(){
-        VecR3 retval = new VecR3(colX.getY(),colY.getY(),colZ.getZ());
+        VecR3 retval = new VecR3(colX.getZ(),colY.getZ(),colZ.getZ());
         return retval;
     }
 

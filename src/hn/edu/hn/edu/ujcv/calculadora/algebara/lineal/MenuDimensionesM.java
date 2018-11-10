@@ -53,7 +53,9 @@ public class MenuDimensionesM {
                 v.setX(lt.leerReal("Ingrese el primer numero vector","Error! Ha ingresado un caracter no valido"));
                 v.setY(lt.leerReal("Ingrese el segundo numero vector","Error! Ha ingresado un caracter no valido"));
                 VecR2 res4 = mat6.mulVector(v);
-                System.out.println("La multiplicacion de matriz por vector es : ( "+ res4.getX() + "," + res4.getY() + ")");
+                System.out.println("La multiplicacion de matriz por vector es \n" );
+                System.out.println("|\t"+ res4.getX()+"\t|");
+                System.out.println("|\t"+ res4.getY()+"\t|");
                 break;
             case 5:
                 Mat2x2 mat7 = leerMatriz2x2("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
@@ -109,8 +111,23 @@ public class MenuDimensionesM {
                 imprimirMatriz3x3(res3);
                 break;
             case 4:
+                Mat3x3 mat6 = leerMatriz3x3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                VecR3 v = new VecR3(0,1,0);
+                v.setX(lt.leerReal("Ingrese el primer numero del vector","Error! Ha ingresado un caracter no valido"));
+                v.setY(lt.leerReal("Ingrese el segundo numero del vector","Error! Ha ingresado un caracter no valido"));
+                v.setZ(lt.leerReal("Ingrese el tercer numero del vector","Error! Ha ingresado un caracter no valido"));
+                VecR3 res4 = mat6.mulVector(v);
+                System.out.println("La multiplicacion de matriz por vector es \n" );
+                System.out.println("|\t"+ res4.getX()+"\t|");
+                System.out.println("|\t"+ res4.getY()+"\t|");
+                System.out.println("|\t"+ res4.getZ()+"\t|");
                 break;
             case 5:
+                Mat3x3 mat7 = leerMatriz3x3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat3x3 mat8 = leerMatriz3x3("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                Mat3x3 res5 = mat8.mul(mat7);
+                System.out.println("La multiplicacion de matrices es \n");
+                imprimirMatriz3x3(res5);
                 break;
             case 6:
                 System.out.println("Has regresado al menu principal \n \n");
