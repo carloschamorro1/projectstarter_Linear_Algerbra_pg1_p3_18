@@ -299,8 +299,6 @@ public class MenuDimensionesM {
                 if (i == 4 && j == 4)
                     colw.setW(lt.leerReal("Ingrese el valor de fila " + i + " de la columna " + j, "Error ha ingresado un caracter no valido"));
             }
-
-
         }
         return new Mat4x4(colx,coly,colz,colw);
     }
