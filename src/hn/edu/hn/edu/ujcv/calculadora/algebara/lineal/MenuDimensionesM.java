@@ -168,10 +168,33 @@ public class MenuDimensionesM {
                 imprimirMatriz4x4(res2);
                 break;
             case 3:
+                double alpha = 0;
+                alpha = lt.leerEntero("Ingrese el escalar", "Error ha ingresado un caracter no valido");
+                Mat4x4 mat5 = leerMatriz4x4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat4x4 res3 = mat5.mulEscalar(alpha);
+                System.out.println("La multiplicacion de una matriz por un escalar es \n");
+                imprimirMatriz4x4(res3);
                 break;
             case 4:
+                Mat4x4 mat6 = leerMatriz4x4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                VecR4 v = new VecR4(0,1,0,0);
+                v.setX(lt.leerReal("Ingrese el primer numero del vector","Error! Ha ingresado un caracter no valido"));
+                v.setY(lt.leerReal("Ingrese el segundo numero del vector","Error! Ha ingresado un caracter no valido"));
+                v.setZ(lt.leerReal("Ingrese el tercer numero del vector","Error! Ha ingresado un caracter no valido"));
+                v.setW(lt.leerReal("Ingrese el tercer numero del vector","Error! Ha ingresado un caracter no valido"));
+                VecR4 res4 = mat6.mulVector(v);
+                System.out.println("La multiplicacion de matriz por vector es \n" );
+                System.out.println("|\t"+ res4.getX()+"\t|");
+                System.out.println("|\t"+ res4.getY()+"\t|");
+                System.out.println("|\t"+ res4.getZ()+"\t|");
+                System.out.println("|\t"+ res4.getW()+"\t|");
                 break;
             case 5:
+                Mat4x4 mat7 = leerMatriz4x4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
+                Mat4x4 mat8 = leerMatriz4x4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
+                Mat4x4 res5 = mat8.mul(mat7);
+                System.out.println("La multiplicacion de matrices es \n");
+                imprimirMatriz4x4(res5);
                 break;
             case 6:
                 System.out.println("Has regresado al menu principal \n \n");

@@ -75,7 +75,7 @@ public class Mat4x4 {
     }
 
     // multiplicacion escalar
-    public  Mat4x4 mul(double alpha){
+    public  Mat4x4 mulEscalar(double alpha){
         Mat4x4 retval = new Mat4x4();
 
         retval.colX.setX(this.colX.getX() * alpha);
@@ -101,7 +101,7 @@ public class Mat4x4 {
         return  retval;
     }
     // multiplicacion vector columna
-    public VecR4 mul(VecR4 v){
+    public VecR4 mulVector(VecR4 v){
         VecR4 retval = new VecR4();
         retval.setX(v.dotProduct(this.getFilaX()));
         retval.setY(v.dotProduct(this.getFilaY()));
