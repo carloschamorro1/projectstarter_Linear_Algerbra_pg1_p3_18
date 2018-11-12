@@ -5,7 +5,7 @@ import hn.edu.ujcv.util.LectorTeclado;
 public class MenuVectores {
     public int opcion2;
     MenuDimensionesV menuDimensionesV = new MenuDimensionesV();
-    LectorTeclado lt = new LectorTeclado();
+    LectorTeclado lt = LectorTeclado.getInstance();
 
     public void presentarOpciones(){
         System.out.println("\t \t \t \t Vectores");

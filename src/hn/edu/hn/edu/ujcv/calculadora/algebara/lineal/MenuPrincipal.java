@@ -6,7 +6,7 @@ public class MenuPrincipal {
     public int opcion;
     MenuMatrices menuMatrices = new MenuMatrices();
     MenuVectores menuVectores = new MenuVectores();
-    LectorTeclado lt = new LectorTeclado();
+    LectorTeclado lt = LectorTeclado.getInstance();
 
     public void presentarOpciones() {
         System.out.println("\t \t \t \t Bienvenido");

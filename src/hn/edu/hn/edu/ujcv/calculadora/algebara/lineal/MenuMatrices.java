@@ -5,7 +5,7 @@ import hn.edu.ujcv.util.LectorTeclado;
 public class MenuMatrices {
     public int opcion;
     MenuDimensionesM menuDimensionesM = new MenuDimensionesM();
-    LectorTeclado lt = new LectorTeclado();
+    LectorTeclado lt = LectorTeclado.getInstance();
 
     public void presentarOpciones() {
         System.out.println("\t \t \t \t Matrices");

@@ -6,7 +6,7 @@ import hn.edu.ujcv.util.LectorTeclado;
 
 public class MenuDimensionesM {
     private int opcion;
-    LectorTeclado lt = new LectorTeclado();
+    LectorTeclado lt = LectorTeclado.getInstance();
 
     public void presentarOpciones2x2() {
         System.out.println("\t \t \t \t Matrices de 2x2");
@@ -321,6 +321,3 @@ public class MenuDimensionesM {
         System.out.println("|\t" + a.getColX().getW() + "  " + a.getColY().getW() + "  " + a.getColZ().getW() + "  "+ a.getColW().getW() + "\t|");
     }
 }
-
-
-

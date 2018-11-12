@@ -8,7 +8,7 @@ import hn.edu.ujcv.util.LectorTeclado;
 
 public class MenuDimensionesV {
     private int opcion;
-    LectorTeclado lt = new LectorTeclado();
+    LectorTeclado lt = LectorTeclado.getInstance();
 
     public void presentarOpcionesR2() {
         System.out.println("\t \t \t \t Vectores en R2");

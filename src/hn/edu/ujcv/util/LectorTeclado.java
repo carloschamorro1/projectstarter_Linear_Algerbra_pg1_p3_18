@@ -5,12 +5,18 @@ import java.util.Scanner;
 public class LectorTeclado {
     private Scanner mSc;
 
-    public LectorTeclado(){
+    private LectorTeclado(){
         Scanner sc = new Scanner(System.in);
         init(sc);
     }
 
-
+    private static LectorTeclado instance;
+    public static LectorTeclado getInstance(){
+        if(instance==null){
+            instance = new LectorTeclado();
+        }
+        return instance;
+    }
     private void init(Scanner sc){
          mSc = sc;
     }
@@ -25,7 +31,6 @@ public class LectorTeclado {
         retval = mSc.nextDouble();
         return retval;
     }
-
     public int leerEntero(String mensaje, String mensajeError){
         int retval = 0;
         System.out.println(mensaje);
