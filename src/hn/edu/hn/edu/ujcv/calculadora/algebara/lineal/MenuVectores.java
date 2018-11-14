@@ -22,7 +22,6 @@ public class MenuVectores {
     }
 
     public int procesarOpcion(int opcion2) {
-            //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
             switch (opcion2) {
                 case 1: menuDimensionesV.presentarOpcionesR2();
                     menuDimensionesV.procesarOpcionR2(menuDimensionesV.leerOpcionesR2());

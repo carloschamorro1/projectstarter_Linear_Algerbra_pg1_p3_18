@@ -22,7 +22,6 @@ public class MenuMatrices {
     }
 
     public void procesarOpcion(int opcion) {
-        //opcion = lt.leerEntero("Ingrese una opcion", "Ha ingresado una opcion erronea");
         switch (opcion) {
             case 1:
                 menuDimensionesM.presentarOpciones2x2();
