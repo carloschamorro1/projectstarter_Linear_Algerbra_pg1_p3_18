@@ -60,7 +60,7 @@ public class MenuDimensionesM {
             case 5:
                 Mat2x2 mat7 = leerMatriz2x2("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
                 Mat2x2 mat8 = leerMatriz2x2("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
-                Mat2x2 res5 = mat8.mul(mat7);
+                Mat2x2 res5 = mat7.mul(mat8);
                 System.out.println("La multiplicacion de matrices es \n");
                 imprimirMatriz2x2(res5);
                 break;
@@ -304,8 +304,8 @@ public class MenuDimensionesM {
     }
 
     public void imprimirMatriz2x2(Mat2x2 a){
-        System.out.println("|\t" + a.getFilaX().getX() + "  " + a.getFilaX().getY() + "\t|");
-        System.out.println("|\t" + a.getFilaY().getX() + "  " + a.getFilaY().getY() + "\t|");
+        System.out.println("|\t" + a.getColX().getX() + "  " + a.getColY().getX() + "\t|");
+        System.out.println("|\t" + a.getColX().getY() + "  " + a.getColY().getY() + "\t|");
     }
 
     public void imprimirMatriz3x3(Mat3x3 a){
