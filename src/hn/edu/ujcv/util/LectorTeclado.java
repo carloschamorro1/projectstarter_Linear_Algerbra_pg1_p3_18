@@ -31,6 +31,7 @@ public class LectorTeclado {
         retval = mSc.nextDouble();
         return retval;
     }
+
     public int leerEntero(String mensaje, String mensajeError){
         int retval = 0;
         System.out.println(mensaje);
