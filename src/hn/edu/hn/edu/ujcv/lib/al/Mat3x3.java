@@ -108,11 +108,11 @@ public class Mat3x3 {
         //   b es b
         //   cx es colX
         //   cy es colY
-        //   x es   getX , setX
+        //   x es   getX , setX1
         //   y es   getY , setY
-        retval.setColX(new VecR3(this.colX.dotProduct(b.getFilaX()),this.colX.dotProduct(b.getFilaY()),this.colX.dotProduct(b.getFilaZ())));
-        retval.setColY(new VecR3(this.colY.dotProduct(b.getFilaX()),this.colY.dotProduct(b.getFilaY()),this.colY.dotProduct(b.getFilaZ())));
-        retval.setColZ(new VecR3(this.colZ.dotProduct(b.getFilaX()),this.colZ.dotProduct(b.getFilaY()),this.colZ.dotProduct(b.getFilaZ())));
+        retval.setColX(new VecR3(this.getFilaX().dotProduct(b.colX),this.getFilaY().dotProduct(b.colX), this.getFilaZ().dotProduct(b.colX)));
+        retval.setColY(new VecR3(this.getFilaX().dotProduct(b.colY),this.getFilaY().dotProduct(b.colY), this.getFilaZ().dotProduct(b.colY)));
+        retval.setColZ(new VecR3(this.getFilaX().dotProduct(b.colZ),this.getFilaY().dotProduct(b.colZ), this.getFilaZ().dotProduct(b.colZ)));
         return retval;
     }
 

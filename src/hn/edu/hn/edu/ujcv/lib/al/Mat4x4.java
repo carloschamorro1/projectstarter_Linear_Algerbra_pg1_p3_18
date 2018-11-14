@@ -126,10 +126,10 @@ public class Mat4x4 {
         //   cy es colY
         //   x es   getX , setX
         //   y es   getY , setY
-        retval.setColX(new VecR4(this.colX.dotProduct(b.getFilaX()),this.colX.dotProduct(b.getFilaY()),this.colX.dotProduct(b.getFilaZ()),this.colX.dotProduct(b.getFilaW())));
-        retval.setColY(new VecR4(this.colY.dotProduct(b.getFilaX()),this.colY.dotProduct(b.getFilaY()),this.colY.dotProduct(b.getFilaZ()),this.colY.dotProduct(b.getFilaW())));
-        retval.setColZ(new VecR4(this.colZ.dotProduct(b.getFilaX()),this.colZ.dotProduct(b.getFilaY()),this.colZ.dotProduct(b.getFilaZ()),this.colZ.dotProduct(b.getFilaW())));
-        retval.setColW(new VecR4(this.colW.dotProduct(b.getFilaX()),this.colW.dotProduct(b.getFilaY()),this.colW.dotProduct(b.getFilaZ()),this.colW.dotProduct(b.getFilaW())));
+        retval.setColX(new VecR4(this.getFilaX().dotProduct(b.colX),this.getFilaY().dotProduct(b.colX), this.getFilaZ().dotProduct(b.colX),this.getFilaW().dotProduct(b.colX)));
+        retval.setColY(new VecR4(this.getFilaX().dotProduct(b.colY),this.getFilaY().dotProduct(b.colY), this.getFilaZ().dotProduct(b.colY),this.getFilaW().dotProduct(b.colY)));
+        retval.setColZ(new VecR4(this.getFilaX().dotProduct(b.colZ),this.getFilaY().dotProduct(b.colZ), this.getFilaZ().dotProduct(b.colZ),this.getFilaW().dotProduct(b.colZ)));
+        retval.setColW(new VecR4(this.getFilaX().dotProduct(b.colW),this.getFilaY().dotProduct(b.colW), this.getFilaZ().dotProduct(b.colW),this.getFilaW().dotProduct(b.colW)));
         return retval;
     }
 

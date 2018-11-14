@@ -125,7 +125,7 @@ public class MenuDimensionesM {
             case 5:
                 Mat3x3 mat7 = leerMatriz3x3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
                 Mat3x3 mat8 = leerMatriz3x3("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
-                Mat3x3 res5 = mat8.mul(mat7);
+                Mat3x3 res5 = mat7.mul(mat8);
                 System.out.println("La multiplicacion de matrices es \n");
                 imprimirMatriz3x3(res5);
                 break;
@@ -192,7 +192,7 @@ public class MenuDimensionesM {
             case 5:
                 Mat4x4 mat7 = leerMatriz4x4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
                 Mat4x4 mat8 = leerMatriz4x4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
-                Mat4x4 res5 = mat8.mul(mat7);
+                Mat4x4 res5 = mat7.mul(mat8);
                 System.out.println("La multiplicacion de matrices es \n");
                 imprimirMatriz4x4(res5);
                 break;
