@@ -29,6 +29,7 @@ public class LectorTeclado {
             System.out.println(mensajeError);
         }
         retval = mSc.nextDouble();
+        mSc.nextLine();
         return retval;
     }
 
@@ -40,6 +41,7 @@ public class LectorTeclado {
             System.out.println(mensajeError);
         }
         retval = mSc.nextInt();
+        mSc.nextLine();
         return retval;
     }
 
